@@ -1,0 +1,5 @@
+classes = 4
+train = /home/lys-90/darknet/build/darknet/x64/data/train_coin_counter_29.txt
+valid = /home/lys-90/darknet/build/darknet/x64/data/test_coin_counter_29.txt
+names = /home/lys-90/darknet/build/darknet/x64/data/coin_counter_29.names
+backup = /home/lys-90/darknet/build/darknet/x64/data/backup/
