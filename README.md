@@ -1,5 +1,5 @@
 # AIOT_final
-## Requirement
+## Requirements
 - [darknet](https://github.com/AlexeyAB/darknet)
 - [openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)
 - [GPT2-chitchat](https://github.com/yangjianxin1/GPT2-chitchat)
