@@ -1,2 +1,2 @@
 # AIOT_final
-All the model is [here](https://github.com/Kenhchs/large-files)
+All the models are [here](https://github.com/Kenhchs/large-files)
