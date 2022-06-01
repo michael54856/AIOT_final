@@ -3,6 +3,8 @@
 - [darknet](https://github.com/AlexeyAB/darknet)
 - [openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)
 - [GPT2-chitchat](https://github.com/yangjianxin1/GPT2-chitchat)
+- [OpenCC](https://github.com/BYVoid/OpenCC)
+- Sign up [LINE Developers](https://developers.line.biz/zh-hant/) and [Imgur](https://imgur.com/)
 
 ## How to use
 - Download [pytorch_model.bin](https://github.com/Kenhchs/large-files/blob/main/GPT2/pytorch_model.bin?raw=true),  [config.json](https://github.com/Kenhchs/large-files/blob/main/GPT2/config.json?raw=true),  [coin_counter_29_v2.weights](https://github.com/Kenhchs/large-files/blob/main/yolov4/coin_counter_29_v2.weights?raw=true),  [mask_137.weights](https://github.com/Kenhchs/large-files/blob/main/yolov4/mask_137.weights?raw=true)
