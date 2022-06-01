@@ -6,7 +6,7 @@
 
 ## How to use
 - Download all the trained models [here](https://github.com/Kenhchs/large-files)
-- Put ```pytorch_model.bin``` and ```config.json``` in ```GPT2-chitchat/model```
+- Put ```pytorch_model.bin``` and ```config.json``` in ```GPT2-chitchat/model/```
 - Put ```chat.py``` in ```GPT2-chitchat/```
 - Put ```GPT2-chitchat``` in the ```darknet/```
 - Creat a ```Stock``` folder in ```darknet/``` and put ```stock.py``` in ```Stock/```
