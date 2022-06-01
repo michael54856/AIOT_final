@@ -5,7 +5,7 @@
 - [GPT2-chitchat](https://github.com/yangjianxin1/GPT2-chitchat)
 
 ## How to use
-- Download all the trained models [here](https://github.com/Kenhchs/large-files)
+- Download [pytorch_model.bin](https://github.com/Kenhchs/large-files/blob/main/GPT2/pytorch_model.bin?raw=true),  [config.json](https://github.com/Kenhchs/large-files/blob/main/GPT2/config.json?raw=true),  [coin_counter_29_v2.weights](https://github.com/Kenhchs/large-files/blob/main/yolov4/coin_counter_29_v2.weights?raw=true),  [mask_137.weights](https://github.com/Kenhchs/large-files/blob/main/yolov4/mask_137.weights?raw=true)
 - Put ```pytorch_model.bin``` and ```config.json``` in ```GPT2-chitchat/model/```
 - Put ```chat.py``` in ```GPT2-chitchat/```
 - Put ```GPT2-chitchat``` in the ```darknet/```
