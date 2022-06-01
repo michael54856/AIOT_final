@@ -9,7 +9,7 @@
 - Put ```pytorch_model.bin``` and ```config.json``` in ```GPT2-chitchat/model/```
 - Put ```chat.py``` in ```GPT2-chitchat/```
 - Put ```GPT2-chitchat``` in the ```darknet/```
-- Creat a ```Stock``` folder in ```darknet/``` and put ```stock.py``` in ```Stock/```
+- Create a ```Stock``` folder in ```darknet/``` and put ```stock.py``` in ```Stock/```
 - Put ```coin_counter_29.cfg``` and ```mask_137.cfg``` in ```darknet/cfg/```
 - Put ```coin_counter_29.data``` and ```mask_137.data``` in ```darknet/data/``` 
 - Put ```app.py```, ```auth.ini```, ```coin_counter_29_v2.weights```, and ```mask_137.weights``` in ```darknet/```
