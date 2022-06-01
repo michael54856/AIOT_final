@@ -6,6 +6,11 @@
 
 ## How to use
 - Download all the trained models [here](https://github.com/Kenhchs/large-files)
+- Put ```pytorch_model.bin``` and ```config.json``` in ```GPT2-chitchat/model```
+- Put GPT2-chitchat in the darknet folder
+- Creat a ```Stock``` folder in ```darknet``` and put ```stock.py``` in ```Stock``` folder
+- Put ```coin_counter_29.cfg``` and ```mask_137.cfg``` in ```darknet/cfg/```
+- Put ```coin_counter_29.data``` and ```mask_137.data``` in ```darknet/data/```  
 
 ## Reference
 - [darknet](https://github.com/AlexeyAB/darknet)
