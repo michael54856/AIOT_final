@@ -8,18 +8,24 @@
 
 ## How to use
 - Download [pytorch_model.bin](https://github.com/Kenhchs/large-files/blob/main/GPT2/pytorch_model.bin?raw=true),  [config.json](https://github.com/Kenhchs/large-files/blob/main/GPT2/config.json?raw=true),  [coin_counter_29_v2.weights](https://github.com/Kenhchs/large-files/blob/main/yolov4/coin_counter_29_v2.weights?raw=true),  [mask_137.weights](https://github.com/Kenhchs/large-files/blob/main/yolov4/mask_137.weights?raw=true)
+
 - Put ```pytorch_model.bin``` and ```config.json``` in ```GPT2-chitchat/model/```
 - Put ```chat.py``` in ```GPT2-chitchat/```
 - Put ```GPT2-chitchat``` in the ```darknet/```
 - Create a ```Stock``` folder in ```darknet/``` and put ```stock.py``` in ```Stock/```
 - Put ```coin_counter_29.cfg``` and ```mask_137.cfg``` in ```darknet/cfg/```
 - Put ```coin_counter_29.data``` and ```mask_137.data``` in ```darknet/data/``` 
-- Put ```app.py```, ```auth.ini```, ```coin_counter_29_v2.weights```, and ```mask_137.weights``` in ```darknet/```
+- Put ```app.py```, ```auth.ini```, ```coin_counter_29_v2.weights```, ```mask_137.weights```, ```openpose```, and ```ActionScoring_Image``` in ```darknet/```
 - File structure is as follows
 ```
 darknet
 │ README.md    
 │
+|
+└───ActionScoring_Image
+|      |......
+|      
+|      
 └───GPT2-chitchat
 │      └───model
 |      |     |  pytorch_model.bin
