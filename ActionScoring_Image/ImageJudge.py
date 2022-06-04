@@ -172,7 +172,7 @@ def VectorDiffLoss(vec1,vec2):
         points += 500000
     return points/16
 
-p1 = subprocess.Popen(['C:\\Users\\michael\\Desktop\\openpose\\build\\x64\\Release\\OpenPoseDemo.exe', '--model_folder', 'C:\\Users\\michael\\Desktop\\openpose\\models', '--num_gpu_start', '0', '--display', '0', '--net_resolution', '640x480', '--image_dir', './Image', '--write_images', 'RenderImage', '--write_json', 'outputJson']) 
+p1 = subprocess.Popen(['./../openpose/build/examples/openpose/openpose.bin', '--model_folder', './../openpose/models', '--num_gpu_start', '0', '--display', '0', '--net_resolution', '320x320', '--image_dir', './Image', '--write_images', 'RenderImage', '--write_json', 'outputJson']) 
 p1.wait()
 
 poseVector = generateVector("outputJson/Compare_keypoints.json") #取得比對的向量資訊
