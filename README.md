@@ -64,5 +64,5 @@ darknet
 - [openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)
 - [GPT2-chitchat](https://github.com/yangjianxin1/GPT2-chitchat)
 - [OpenCC](https://github.com/BYVoid/OpenCC)
-- [installation](https://medium.com/geekculture/yolov4-darknet-installation-and-usage-on-your-system-windows-linux-8dec2cea6e81)
+- [Yolov4 Installation](https://medium.com/geekculture/yolov4-darknet-installation-and-usage-on-your-system-windows-linux-8dec2cea6e81)
 - [Messaging API](https://developers.line.biz/en/docs/messaging-api/)
