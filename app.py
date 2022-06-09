@@ -19,12 +19,18 @@ import time
 
 app = Flask(__name__)
 
+
+config = configparser.ConfigParser()
+config.read('auth.ini')
+LINE_Channel_access_token = config.get('credentials', 'LINE_Channel_access_token')
+print(LINE_Channel_access_token)
+LINE_Channel_secret = config.get('credentials', 'LINE_Channel_secret')
+print(LINE_Channel_secret)
+
 # Channel Access Token
-line_bot_api = LineBotApi('Onz8na9xK1lXRNjDl763G0VDZt4BjYG/SFf2ONv/dlQZlha4QrFX/oKGU1npOGCeG6iE0UjJF5J1jrn7ehJLNHfRXr1CFvjwCzUfVSf+TbBHBGwABRrpKil+hAe7edkb1LXEq/MUYCENxTIYmW8+uwdB04t89/1O/w1cDnyilFU=')
+line_bot_api = LineBotApi(LINE_Channel_access_token)
 # Channel secret
-handler = WebhookHandler('c1a54670b3069c72b414263e637cc189')
- # ID
-#line_bot_api.push_message('Ubb5625b53855903f25ed79edc377757e', TextSendMessage(text='你可以開始了'))
+handler = WebhookHandler(LINE_Channel_secret)
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
