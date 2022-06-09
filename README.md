@@ -84,6 +84,9 @@ darknet
 
 ### 3. LINE Bot
 ### 4. LINE 圖文選單
+- 開啟 Postman
+- 步驟 0. 在執行下面 1~10 步驟前請先完成下圖步驟: ```GET``` 改成 ```POST```, ```TYPE``` 改成 ```Bearer Token```, ```Token``` 輸入 LINE Bot 的 ```Channel access token```
+![alt text](https://github.com/Kenhchs/Image/blob/main/Postman1.png)<br>
 
 ## 參考資料
 - [darknet](https://github.com/AlexeyAB/darknet)
