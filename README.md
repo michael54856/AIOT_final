@@ -7,6 +7,8 @@
 - 註冊 [LINE Developers](https://developers.line.biz/zh-hant/) 和 [Imgur](https://imgur.com/)
 
 ## 使用說明
+
+### 1. 檔案結構
 - 下載 [pytorch_model.bin](https://github.com/Kenhchs/large-files/blob/main/GPT2/pytorch_model.bin?raw=true),  [config.json](https://github.com/Kenhchs/large-files/blob/main/GPT2/config.json?raw=true),  [coin_counter_29_v2.weights](https://github.com/Kenhchs/large-files/blob/main/yolov4/coin_counter_29_v2.weights?raw=true),  [mask_137.weights](https://github.com/Kenhchs/large-files/blob/main/yolov4/mask_137.weights?raw=true)
 
 - 將 ```pytorch_model.bin``` 和 ```config.json``` 放到 ```GPT2-chitchat/model/```
@@ -58,7 +60,7 @@ darknet
 | mask_137.weights
 |......
 ```
-
+### 2. Imgur
 - 註冊 ![Imgur App](https://api.imgur.com/oauth2/addclient)
 - Authorization type 選擇第二個不用回傳 URL。
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur1.png) 
