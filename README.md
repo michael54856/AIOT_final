@@ -60,9 +60,10 @@ darknet
 ```
 
 - 註冊 ![Imgur App](https://api.imgur.com/oauth2/addclient)
-- Authorization type 選擇第二個不用回傳 URL。再輸入完email後按下submit，就可以看到 App 的 ID、secret
-- ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur1.png)
-- ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur2.png)
+- Authorization type 選擇第二個不用回傳 URL。
+![alt text](https://github.com/Kenhchs/Image/blob/main/imgur1.png) 
+- 再輸入完email後按下submit，就可以看到 App 的 ID、secret
+![alt text](https://github.com/Kenhchs/Image/blob/main/imgur2.png)
 
 
 
