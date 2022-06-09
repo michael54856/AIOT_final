@@ -91,6 +91,7 @@ darknet
 ![alt text](https://github.com/Kenhchs/Image/blob/main/Postman2.png)<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/Postman3.png)<br>
 - 步驟 2. Post 輸入 ```https://api-data.line.me/v2/bot/richmenu/{步驟1得到的 richMenuId}/content```, 點 ```Body``` 然後點 ```binary```  圖片選擇 ```menu_1.JPG```, 最後按 ```Send```
+![alt text](https://github.com/Kenhchs/Image/blob/main/Postman4.png)<br>
 
 ## 參考資料
 - [darknet](https://github.com/AlexeyAB/darknet)
