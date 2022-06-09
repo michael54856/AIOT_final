@@ -61,10 +61,11 @@ darknet
 |......
 ```
 ### 2. Imgur
+- 打開 ```auth.ini```,  ```imgur_username``` 和 ```imgur_password``` 分別填入你 imgur 的帳號和密碼 
 - 註冊 [Imgur App](https://api.imgur.com/oauth2/addclient)<br>
 - Authorization type 選擇第二個不用回傳 URL。<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur1.png) <br>
-- 輸入完email後按下 ```submit``` ，就可以看到 App 的 Client ID 和 Client secret, 記住這兩個等一下會用到<br>
+- 輸入完email後按下 ```submit``` ，就可以看到 App 的 Client ID 和 Client secret, 把這個數值填入```auth.ini```, 也記住這兩個數值等一下會用到<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur2.png)<br>
 - 註冊了App後，在個人設定(settings)的 Applications 中就會看到了<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur3.png)<br>
@@ -83,9 +84,29 @@ darknet
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur9.png)<br>
 
 ### 3. LINE Bot
+- 登入[LINE Developers](https://developers.line.biz/console/)
+- 找到 Providers 點選 ```Create```
+![alt text](https://github.com/Kenhchs/Image/blob/main/linebot1.png)<br>
+- 輸入 ```Provider name``` 按 ```Create```
+![alt text](https://github.com/Kenhchs/Image/blob/main/linebot2.png)<br>
+- 選擇 ```Create a Messaging API channel```, 填寫資訊, 按 ```Create```, 接著按 ```OK```, 最後按 ```同意```
+![alt text](https://github.com/Kenhchs/Image/blob/main/linebot3.png)<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/linebot4.png)<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/linebot5.png)<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/linebot6.png)<br>
+- Basic settings 裡有 ```Channel secret```
+![alt text](https://github.com/Kenhchs/Image/blob/main/linebot7.png)<br>
+- 按下 ```Messaging API``` 找到 ```Channel access token``` 按下 ```issue``` 後, 你就會獲得 ```Channel access token```
+![alt text](https://github.com/Kenhchs/Image/blob/main/linebot8.png)<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/linebot9.png)<br>
+- 到 Basic settings 點選 ```LINE Official Account Manager```, 點選 ```回應設定```, 將基本設定與進階設定調整成下圖所示
+![alt text](https://github.com/Kenhchs/Image/blob/main/linebot10.png)<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/linebot11.png)<br>
+
+
 ### 4. LINE 圖文選單
 - 開啟 Postman
-- 步驟0 在執行下面 1~10 步驟前請先完成下圖步驟: ```GET``` 改成 ```POST```, ```TYPE``` 改成 ```Bearer Token```, ```Token``` 輸入 LINE Bot 的 ```Channel access token```
+- 步驟0 在執行下面 1~10 步驟前請先完成下圖步驟: ```GET``` 改成 ```POST```, ```TYPE``` 改成 ```Bearer Token```, ```Token``` 輸入 [LINE Bot](#3-line-bot) 的 ```Channel access token```
 ![alt text](https://github.com/Kenhchs/Image/blob/main/Postman1.png)<br>
 - 步驟1 Post 輸入 ```https://api.line.me/v2/bot/richmenu```, 點 ```Headers``` 增加 ```Content-Type``` 和 ```application/json```, 點 ```Body``` 然後點 ```raw``` 中間輸入  [步驟1 json檔](https://github.com/Kenhchs/Image/blob/main/Postman1.json) , 最後按```Send```, 得到 ```richMenuId```
 ![alt text](https://github.com/Kenhchs/Image/blob/main/Postman2.png)<br>
