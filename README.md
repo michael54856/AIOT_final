@@ -59,10 +59,17 @@ darknet
 |......
 ```
 
+- 註冊 ![Imgur App](https://api.imgur.com/oauth2/addclient)
+- Authorization type 選擇第二個不用回傳 URL。再輸入完email後按下submit，就可以看到 App 的 ID、secret
+- ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur1.jpg)
+- ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur2.jpg)
+
+
+
 ## 參考資料
 - [darknet](https://github.com/AlexeyAB/darknet)
 - [openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)
 - [GPT2-chitchat](https://github.com/yangjianxin1/GPT2-chitchat)
 - [OpenCC](https://github.com/BYVoid/OpenCC)
-- [installation](https://medium.com/geekculture/yolov4-darknet-installation-and-usage-on-your-system-windows-linux-8dec2cea6e81)
+- [Yolov4 Installation](https://medium.com/geekculture/yolov4-darknet-installation-and-usage-on-your-system-windows-linux-8dec2cea6e81)
 - [Messaging API](https://developers.line.biz/en/docs/messaging-api/)
