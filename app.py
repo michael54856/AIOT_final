@@ -16,9 +16,9 @@ import subprocess
 import pyimgur
 import configparser
 import time
+import opencc
 
 app = Flask(__name__)
-
 
 config = configparser.ConfigParser()
 config.read('auth.ini')
@@ -68,27 +68,70 @@ def handle_join(event):
 def handle_leave(event):
 	pass
 
-# two modes : mask and coin
-mode = "mask"
+# 6 modes : chat bot, stock prediction, coin counter, mask detection, action scoring(image), action scoring(video)
+input_counter = 0 # count for action_scoring_image or action_scoring_video, because it need two input to get the score 
+chat_bot = "功能重置"
+stock_prediction = "股票預測"
+coin_counter = "零錢辨識"
+mask_detection = "口罩辨識"
+action_scoring_image = "動作評分-照片"
+action_scoring_video = "動作評分-影片"
+mode = chat_bot
 
 # handle text message
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-	if event.message.text != "使用說明":
-		if	event.message.text == "face":
-			mode = "mask"
-		elif event.message.text == "coin":
-			mode = "coin"
-		f = open("mode.txt", "w")
-		f.write(mode)
-		f.close()
-		line_bot_api.reply_message(event.reply_token,TextSendMessage(text='請輸入圖片'))
-		print(mode)
+	global mode
+	global input_counter
+	if event.message.text == chat_bot:
+		mode = chat_bot
+		input_counter = 0
+		line_bot_api.reply_message(event.reply_token,TextSendMessage(text='切換為聊天機器人'))
+
+	elif event.message.text == stock_prediction:
+		mode = stock_prediction
+		line_bot_api.reply_message(event.reply_token,TextSendMessage(text='切換股票預測'))
+	
+	elif event.message.text == coin_counter:
+		mode = coin_counter
+		line_bot_api.reply_message(event.reply_token,TextSendMessage(text='切換為零錢辨識'))
+	
+	elif event.message.text == mask_detection:
+		mode = mask_detection
+		line_bot_api.reply_message(event.reply_token,TextSendMessage(text='切換口罩辨識'))
+	
+	elif event.message.text == action_scoring_image:
+		mode = action_scoring_image
+		input_counter = 0
+		line_bot_api.reply_message(event.reply_token,TextSendMessage(text='切換為動作評分-照片'))
+
+	elif event.message.text == action_scoring_video:
+		mode = action_scoring_video
+		input_counter = 0
+		line_bot_api.reply_message(event.reply_token,TextSendMessage(text='切換為動作評分-影片'))
+	
+	elif event.message.text == "使用說明":
+		mode = chat_bot
+		line_bot_api.reply_message(event.reply_token,TextSendMessage(text='歡迎使用物聯網綜合系統，本專案有以下幾個功能\n\n1.聊天機器人\n2.股票預測\n3.零錢辨識\n4.口罩辨識\n5.動作評分-相片\n6.動作評分-影片\n\n聊天機器人:您只需要在此聊天視窗中正常聊天，機器人即會回覆您\n\n股票預測:點選股票預測的按鈕後，請打入要預測的公司名稱，並且選擇要預測的長度，之後會給予預測結果\n\n零錢辨識:點選零錢辨識得按鈕後，系統會要求您上傳圖片，之後會回覆您各個零錢分別有多少，以及金額的總和\n\n口罩辨識:點選口罩辨識得按鈕後，系統會要求您上傳圖片，之後會回覆您正確配戴口罩，未配戴口罩，以及未正確配戴口罩的人各有多少\n\n動作辨識-相片:點選動作辨識-相片的按鈕後，系統會要求上傳範本動作以及比對的動作，之後會回傳動作的相似程度(1~5分)，以及需要改進的人體位置\n\n動作辨識-影片:點選動作辨識-影片的按鈕後，系統會要求上傳範本動作以及比對的動作，之後會回傳動作的相似程度(1~5分)，以及渲染後的骨架影片'))
+
+	else:
+		if mode == chat_bot:
+			command = ("python3 ./GPT2-chitchat/chat.py --model_path ./GPT2-chitchat/model --device 0")
+			print("chat_bot running")
+			subprocess.call(command, shell=True)
+			fr = open('./GPT2-chitchat//bot_content.txt', 'r')
+			text = fr.read()
+			fr.close()
+			converter = opencc.OpenCC('s2t')
+			line_bot_api.reply_message(event.reply_token,TextSendMessage(text=converter.convert(text)))
+
+		else:
+			line_bot_api.reply_message(event.reply_token,TextSendMessage(text='目前模式為' + mode + ", 如需聊天機器人請點選功能重置"))
 
 # handle image message
 @handler.add(MessageEvent, message=ImageMessage)
 def handle_image_message(event):
-	# save image
+	'''# save image
 	try:
 		if not os.path.isdir('./1Linebot/images'):
 			os.mkdir('./1Linebot/images')
@@ -248,7 +291,7 @@ def handle_image_message(event):
 	except:
 		print("send back to user error")
 		line_bot_api.reply_message(event.reply_token, TextSendMessage(text='系統錯誤'))
-		return
+		return'''
 
 # main function
 import os
