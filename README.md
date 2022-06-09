@@ -97,6 +97,8 @@ darknet
 - 步驟 4. 同步驟 2. ,但圖片改成 ```menu_2.JPG```
 - 步驟 5. 同步驟 1. ,但中間輸入變 [步驟5 json檔](https://github.com/Kenhchs/Image/blob/main/Postman3.json)
 - 步驟 6. 同步驟 2. ,但圖片改成 ```menu_3.JPG```
+- 步驟 7. Post 輸入 ```https://api.line.me/v2/bot/user/all/richmenu/{步驟1得到的 richMenuId}```, 最後按 ```Send```
+![alt text](https://github.com/Kenhchs/Image/blob/main/Postman6.png)<br>
 
 ## 參考資料
 - [darknet](https://github.com/AlexeyAB/darknet)
