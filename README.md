@@ -63,7 +63,7 @@ darknet
 - Authorization type 選擇第二個不用回傳 URL。再輸入完email後按下submit，就可以看到 App 的 ID、secret
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur1.jpg)
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur2.jpg)
-- 
+
 
 
 ## 參考資料
