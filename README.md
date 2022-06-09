@@ -88,6 +88,9 @@ darknet
 ![alt text](https://github.com/Kenhchs/Image/blob/main/linebot1.png)<br>
 - 輸入 ```Provider name``` 按 ```Create```
 ![alt text](https://github.com/Kenhchs/Image/blob/main/linebot2.png)<br>
+- 選擇 ```Create a Messaging API channel```
+![alt text](https://github.com/Kenhchs/Image/blob/main/linebot3.png)<br>
+
 ### 4. LINE 圖文選單
 - 開啟 Postman
 - 步驟0 在執行下面 1~10 步驟前請先完成下圖步驟: ```GET``` 改成 ```POST```, ```TYPE``` 改成 ```Bearer Token```, ```Token``` 輸入 [LINE Bot](#3-line-bot) 的 ```Channel access token```
