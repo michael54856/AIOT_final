@@ -70,7 +70,13 @@ darknet
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur3.png)
 - 按下 ```Redirect``` 的 ```edit``` ，輸入 ```https://www.getpostman.com/oauth2/callback``` , 再按下 ```update``` 
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur4.png)
-
+- 下載 ![Postman](https://www.postman.com/downloads/)
+- 開啟 Postman, 選擇新建 ```Request```
+![alt text](https://github.com/Kenhchs/Image/blob/main/imgur5.png)
+- ```TYPE``` 選擇 ```OAuth 2.0```, 再點 ```Get New Access Token```
+![alt text](https://github.com/Kenhchs/Image/blob/main/imgur6.png)
+- 點完後會出現以下畫面, ```Client ID```、```Client Secret``` 填註冊完App後葉面顯示的,```Token Name```隨意, 其他跟下圖一樣
+![alt text](https://github.com/Kenhchs/Image/blob/main/imgur6.png)
 
 ## 參考資料
 - [darknet](https://github.com/AlexeyAB/darknet)
