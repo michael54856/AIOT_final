@@ -93,6 +93,12 @@ darknet
 ![alt text](https://github.com/Kenhchs/Image/blob/main/linebot4.png)<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/linebot5.png)<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/linebot6.png)<br>
+- Basic settings 裡有 ```Channel secret```
+![alt text](https://github.com/Kenhchs/Image/blob/main/linebot7.png)<br>
+- 按下 ```Messaging API``` 找到 ```Channel access token``` 按下 ```issue``` 後, 你就會獲得 ```Channel access token```
+![alt text](https://github.com/Kenhchs/Image/blob/main/linebot8.png)<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/linebot9.png)<br>
+
 
 ### 4. LINE 圖文選單
 - 開啟 Postman
