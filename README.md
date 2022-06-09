@@ -90,7 +90,8 @@ darknet
 - 步驟 1. Post 輸入 ```https://api.line.me/v2/bot/richmenu```, 點 ```Headers``` 增加 ```Content-Type``` 和 ```application/json```, 點 ```Body``` 然後點 ```raw``` 中間輸入  [步驟1 json檔](https://github.com/Kenhchs/Image/blob/main/Postman1.json) , 最後按```Send```, 得到 ```richMenuId```
 ![alt text](https://github.com/Kenhchs/Image/blob/main/Postman2.png)<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/Postman3.png)<br>
-- 步驟 2. Post 輸入 ```https://api-data.line.me/v2/bot/richmenu/{步驟1得到的 richMenuId}/content```, 點 ```Body``` 然後點 ```binary```  圖片選擇 ```menu_1.JPG```, 最後按 ```Send```
+- 步驟 2. Post 輸入 ```https://api-data.line.me/v2/bot/richmenu/{步驟1得到的 richMenuId}/content```, 點 ```Headers``` 增加 ```Content-Type``` 和 ```image/png```, 點 ```Body``` 然後點 ```binary```  圖片選擇 ```menu_1.JPG```, 最後按 ```Send```
+![alt text](https://github.com/Kenhchs/Image/blob/main/Postman5.png)<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/Postman4.png)<br>
 - 步驟 3. 同步驟 1. ,但中間輸入變 [步驟2 json檔](https://github.com/Kenhchs/Image/blob/main/Postman2.json)
 
