@@ -70,7 +70,7 @@ darknet
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur3.png)<br>
 - 按下 ```Redirect``` 的 ```edit``` ，輸入 ```https://www.getpostman.com/oauth2/callback``` , 再按下 ```update``` <br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur4.png)<br>
-- 下載 ![Postman](https://www.postman.com/downloads/)<br>
+- 下載 [Postman](https://www.postman.com/downloads/)<br>
 - 開啟 Postman, 選擇新建 ```Request```<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur5.png)<br>
 - ```TYPE``` 選擇 ```OAuth 2.0```, 再點 ```Get New Access Token```<br>
