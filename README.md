@@ -61,7 +61,7 @@ darknet
 |......
 ```
 ### 2. Imgur
-- 打開 auth.ini```imgur_username``` 和 ```imgur_password``` 分別填入你 imgur 的帳號和密碼 
+- 打開 ```auth.ini```,  ```imgur_username``` 和 ```imgur_password``` 分別填入你 imgur 的帳號和密碼 
 - 註冊 [Imgur App](https://api.imgur.com/oauth2/addclient)<br>
 - Authorization type 選擇第二個不用回傳 URL。<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur1.png) <br>
