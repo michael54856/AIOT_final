@@ -94,6 +94,7 @@ darknet
 ![alt text](https://github.com/Kenhchs/Image/blob/main/Postman5.png)<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/Postman4.png)<br>
 - 步驟 3. 同步驟 1. ,但中間輸入變 [步驟2 json檔](https://github.com/Kenhchs/Image/blob/main/Postman2.json)
+- 步驟 4. 同步驟 2. ,但圖片改成 ```menu_2.JPG```
 
 ## 參考資料
 - [darknet](https://github.com/AlexeyAB/darknet)
