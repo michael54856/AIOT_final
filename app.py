@@ -337,11 +337,15 @@ def handle_video_message(event):
 			mode = chat_bot
 			video_list = []
 			
-			uploaded_video = upload_vedio("./ActionScoring_Video/SampleRenderedOutput.avi")
+			command = ("ffmpeg -i -y ./ActionScoring_Video/SampleRenderedOutput.avi ./ActionScoring_Video/SampleRenderedOutput.mp4")
+			subprocess.call(command, shell=True)
+			uploaded_video = upload_vedio("./ActionScoring_Video/SampleRenderedOutput.mp4")
 			video_message = VideoSendMessage(original_content_url=uploaded_video, preview_image_url='https://imgur.com/Qf7sRds')
 			video_list.append(video_message)
 
-			uploaded_video = upload_vedio("./ActionScoring_Video/CompareRenderedOutput.avi")
+			command = ("ffmpeg -i -y ./ActionScoring_Video/CompareRenderedOutput.avi ./ActionScoring_Video/CompareRenderedOutput.mp4")
+			subprocess.call(command, shell=True)
+			uploaded_video = upload_vedio("./ActionScoring_Video/CompareRenderedOutput.mp4")
 			video_message = VideoSendMessage(original_content_url=uploaded_video, preview_image_url='https://imgur.com/Qf7sRds')
 			video_list.append(video_message)
 
