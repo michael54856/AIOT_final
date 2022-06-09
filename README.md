@@ -87,6 +87,9 @@ darknet
 - 開啟 Postman
 - 步驟 0. 在執行下面 1~10 步驟前請先完成下圖步驟: ```GET``` 改成 ```POST```, ```TYPE``` 改成 ```Bearer Token```, ```Token``` 輸入 LINE Bot 的 ```Channel access token```
 ![alt text](https://github.com/Kenhchs/Image/blob/main/Postman1.png)<br>
+- 步驟 1. Post 輸入 ```https://api.line.me/v2/bot/richmenu```, 點 ```Headers``` 增加 ```Content-Type``` 和 ```application/json```, 點 ```Body``` 然後點 ```raw``` 中間輸入  [步驟1 json檔](https://github.com/Kenhchs/Image/blob/main/Postman1.json) , 最後按Send, 得到 ```richMenuId```
+![alt text](https://github.com/Kenhchs/Image/blob/main/Postman2.png)<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/Postman3.png)<br>
 
 ## 參考資料
 - [darknet](https://github.com/AlexeyAB/darknet)
