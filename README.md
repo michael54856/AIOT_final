@@ -62,9 +62,12 @@ darknet
 - 註冊 ![Imgur App](https://api.imgur.com/oauth2/addclient)
 - Authorization type 選擇第二個不用回傳 URL。
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur1.png) 
-- 再輸入完email後按下submit，就可以看到 App 的 ID、secret
+- 再輸入完email後按下 ```submit``` ，就可以看到 App 的 ID、secret
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur2.png)
-
+- 註冊了App後，在個人設定(settings)的 Applications 中就會看到了
+![alt text](https://github.com/Kenhchs/Image/blob/main/imgur3.png)
+- 按下 ```Redirect``` 的 ```edit``` ，輸入 ```https://www.getpostman.com/oauth2/callback``` , 再按下 ```update``` 
+![alt text](https://github.com/Kenhchs/Image/blob/main/imgur4.png)
 
 
 ## 參考資料
