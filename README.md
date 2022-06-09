@@ -61,22 +61,26 @@ darknet
 |......
 ```
 ### 2. Imgur
-- 註冊 ![Imgur App](https://api.imgur.com/oauth2/addclient)
-- Authorization type 選擇第二個不用回傳 URL。
-![alt text](https://github.com/Kenhchs/Image/blob/main/imgur1.png) 
-- 再輸入完email後按下 ```submit``` ，就可以看到 App 的 ID、secret
-![alt text](https://github.com/Kenhchs/Image/blob/main/imgur2.png)
-- 註冊了App後，在個人設定(settings)的 Applications 中就會看到了
-![alt text](https://github.com/Kenhchs/Image/blob/main/imgur3.png)
-- 按下 ```Redirect``` 的 ```edit``` ，輸入 ```https://www.getpostman.com/oauth2/callback``` , 再按下 ```update``` 
-![alt text](https://github.com/Kenhchs/Image/blob/main/imgur4.png)
-- 下載 ![Postman](https://www.postman.com/downloads/)
-- 開啟 Postman, 選擇新建 ```Request```
-![alt text](https://github.com/Kenhchs/Image/blob/main/imgur5.png)
-- ```TYPE``` 選擇 ```OAuth 2.0```, 再點 ```Get New Access Token```
-![alt text](https://github.com/Kenhchs/Image/blob/main/imgur6.png)
-- 點完後會出現以下畫面, ```Client ID```、```Client Secret``` 填註冊完App後葉面顯示的,```Token Name```隨意, 其他跟下圖一樣
-![alt text](https://github.com/Kenhchs/Image/blob/main/imgur6.png)
+- 註冊 ![Imgur App](https://api.imgur.com/oauth2/addclient)<br>
+- Authorization type 選擇第二個不用回傳 URL。<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/imgur1.png) <br>
+- 再輸入完email後按下 ```submit``` ，就可以看到 App 的 Client ID 和 Client secret, 記住這兩個等一下會用到<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/imgur2.png)<br>
+- 註冊了App後，在個人設定(settings)的 Applications 中就會看到了<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/imgur3.png)<br>
+- 按下 ```Redirect``` 的 ```edit``` ，輸入 ```https://www.getpostman.com/oauth2/callback``` , 再按下 ```update``` <br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/imgur4.png)<br>
+- 下載 ![Postman](https://www.postman.com/downloads/)<br>
+- 開啟 Postman, 選擇新建 ```Request```<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/imgur5.png)<br>
+- ```TYPE``` 選擇 ```OAuth 2.0```, 再點 ```Get New Access Token```<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/imgur6.png)<br>
+- 點完後會出現以下畫面, ```Client ID```、```Client Secret``` 填註冊完App後葉面顯示的,```Token Name```隨意, 其他跟下圖一樣<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/imgur7.png)<br>
+- 填完後按下 Request Token，就會出現一個要登入 Imgur 帳號的視窗<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/imgur8.png)<br>
+- 最終得到下圖<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/imgur9.png)<br>
 
 ## 參考資料
 - [darknet](https://github.com/AlexeyAB/darknet)
