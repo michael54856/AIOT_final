@@ -28,17 +28,21 @@ def SET_DAYS_OF_PREDICTIONS(interval):
 	if interval == LONG_TERM:
 		nubmer_of_days_want_to_predict = 180
 		see_past_days = 1095
+		return 0
 
 	elif interval == MID_TERM:
 		nubmer_of_days_want_to_predict = 30
 		see_past_days = 180
+		return 0
 
 	elif interval == SHORT_TERM:
 		nubmer_of_days_want_to_predict = 7
 		see_past_days = 30
+		return 0
 
 	else:
 		print("SET_DAYS_OF_PREDICTIONS error")
+		return 1
 
 def stock_prediction():
 	global company
@@ -57,15 +61,19 @@ def stock_prediction():
 		end = dt.datetime(now.year, now.month, now.day)
 	except:
 		print("Get date error")
+		return 1
 
 	# Three modes, long term, mid term, or short term
-	SET_DAYS_OF_PREDICTIONS(Time_Interval)
+	temp = SET_DAYS_OF_PREDICTIONS(Time_Interval)
+	if temp == 1:
+		return 1
 
 	# Get the stock quote
 	try:
 		df = web.DataReader(company, data_source='yahoo', start=start, end=end)
 	except:
 		print("Get stock quote error")
+		return 1
 
 	# Show the data
 	# print(df)
@@ -86,6 +94,7 @@ def stock_prediction():
 		data = df.filter(['Close'])
 	except:
 		print("Create a new dataframe with only the 'Close' column error")
+		return 1
 	# print(data)
 
 	# Convert the dataframe to a numpy array
@@ -93,6 +102,7 @@ def stock_prediction():
 		dataset = data.values
 	except:
 		print("Convert the dataframe to a numpy array error")
+		return 1
 	# print(dataset.shape)
 
 	# Get the number of rows to train the model on
@@ -100,6 +110,7 @@ def stock_prediction():
 		training_data_len = len(dataset)
 	except:
 		print("Get the number of rows to train the model on error")
+		return 1
 
 	# Scale the data
 	try:
@@ -107,12 +118,14 @@ def stock_prediction():
 		scaled_data = scaler.fit_transform(dataset)
 	except:
 		print("Scale the data")
+		return 1
 
 	# Create the training dataset and the scaled traing dataset
 	try:
 		train_data = scaled_data[0:training_data_len, :]
 	except:
 		print("Create the training dataset and the scaled traing dataset error")
+		return 1
 
 	# Split the data into x_train and y_train datasets
 	try:
@@ -123,18 +136,21 @@ def stock_prediction():
 			y_train.append(train_data[i, 0])
 	except:
 		print("Split the data into x_train and y_train datasets error")
+		return 1
 
 	# Convert the x_train and y_train to numpy arrays
 	try:
 		x_train, y_train = np.array(x_train), np.array(y_train)
 	except:
 		print("Convert the x_train and y_train to numpy arrays error")
+		return 1
 
 	# Reshape the data
 	try:
 		x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
 	except:
 		print("Reshape the data error")
+		return 1
 
 	# Build the LSTM model
 	try:
@@ -145,18 +161,21 @@ def stock_prediction():
 		model.add(Dense(1))
 	except:
 		print("Build the LSTM model error")
+		return 1
 
 	# Complie the model
 	try:
 		model.compile(optimizer='adam', loss='mean_squared_error')
 	except:
 		print("Compile the model error")
+		return 1
 
 	# Train the model
 	try:
 		model.fit(x_train, y_train, batch_size=2048, epochs=30)
 	except:
 		print("Train the model error")
+		return 1
 
 	# Create the testing dataset
 	# Create a new array containing scaled values from index 1543 to 2003
@@ -164,6 +183,7 @@ def stock_prediction():
 		test_data = scaled_data
 	except:
 		print("Create the testing dataset error")
+		return 1
 
 	# Create the datasets x_test and y_test
 	try:
@@ -173,18 +193,21 @@ def stock_prediction():
 			x_test.append(test_data[i-past_days_to_predict_now:i, 0])
 	except:
 		print("Create the datasets x_test and y_test error")
+		return 1
 
 	# Convert the data to a numpy array
 	try:
 		x_test = np.array(x_test)
 	except:
 		print("Convert the data to a numpy array error")
+		return 1
 
 	# Reshape the data
 	try:
 		x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
 	except:
 		print("Reshape the data error")
+		return 1
 
 	# Get the model predicted values
 	try:
@@ -192,6 +215,7 @@ def stock_prediction():
 		predictions = scaler.inverse_transform(predictions)
 	except:
 		print("Get the model predicted values error")
+		return 1
 
 	# Plot the data
 	try:
@@ -199,6 +223,7 @@ def stock_prediction():
 		valid['Predictions'] = predictions
 	except:
 		print("Plot the data error")
+		return 1
 
 	# Get the quote
 	try:
@@ -220,7 +245,8 @@ def stock_prediction():
 			pred_price = scaler.inverse_transform(pred_price)
 			new_df.loc[pd.Timestamp(year, month, date, 0)] = [pred_price[0][0]]
 	except:
-		print("Get the quote erro")
+		print("Get the quote error")
+		return 1
 
 	# Visualize the data
 	try:
@@ -242,6 +268,7 @@ def stock_prediction():
 		plt.savefig('./Stock/Stock_prediction.png') # becuase it is called by app.py in darknet
 	except:
 		print("Visualize the data error")
+		return 1
 
 	#print(predictions)
 	#print(train)
@@ -261,7 +288,14 @@ def stock_prediction():
 			print('%s\t\t\t\t\t%.2f' % (temp_date, temp_prediction))
 			fw.write('%s\t\t\t\t\t\t\t\t%.2f\n' % (temp_date, temp_prediction))
 		fw.close()
+		return 0
 	except:
 		print("Print the predictions error")
+		return 1
+	return 1
 
-stock_prediction()
+success_or_error = stock_prediction()
+print("laaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa = {}".format(success_or_error))
+fw = open("./Stock/success_or_error.txt", "w")
+fw.write(str(success_or_error))
+fw.close()

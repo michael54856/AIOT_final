@@ -154,16 +154,25 @@ def handle_message(event):
 				print("stock.py running")
 				subprocess.call(command, shell=True)
 
-				uploaded_image = upload_image("./Stock/Stock_prediction.png")
-				image_message = ImageSendMessage(original_content_url=uploaded_image.link, preview_image_url=uploaded_image.link)
-				return_text = ""
-				fr = open("./Stock/stock_predictions.txt", 'r')
-				for line in fr:
-					return_text += line
-					print(line)
-				fr.close()
-				line_bot_api.reply_message(event.reply_token,[image_message, TextSendMessage(text=return_text)])
+				# check if the stock.py execute successfully
+				fr = open("./Stock/success_or_error.txt", 'r')
+				temp = fr.read()
+				if temp == "1":
+					line_bot_api.reply_message(event.reply_token,[TextSendMessage(text="公司名字或時間長度或其他錯誤")])
+
+				elif temp == "0":
+					uploaded_image = upload_image("./Stock/Stock_prediction.png")
+					image_message = ImageSendMessage(original_content_url=uploaded_image.link, preview_image_url=uploaded_image.link)
+					return_text = ""
+					fr = open("./Stock/stock_predictions.txt", 'r')
+					for line in fr:
+						return_text += line
+						print(line)
+					fr.close()
+					line_bot_api.reply_message(event.reply_token,[image_message, TextSendMessage(text=return_text)])
 				
+				else:
+					line_bot_api.reply_message(event.reply_token,TextSendMessage(text='系統錯誤(text handler)'))
 
 		else:
 			if mode == chat_bot:
