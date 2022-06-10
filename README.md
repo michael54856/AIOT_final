@@ -159,8 +159,19 @@ darknet
 - 由於此專案是在 Ubuntu 18.04 LTS 執行, 如需更改成其他平台，請將 python 檔裡不屬於欲使用平台的指令更改掉,例如<br>
 https://github.com/michael54856/AIOT_final/blob/9ca3ca8b767a1c71ad1ee8d2d470d853956aec5c/app.py#L226<br>
 在 Windows 下需改成 ```darknet.exe detector test data/coin_counter_29.data cfg/coin_counter_29.cfg coin_counter_29_v2.weights -dont_show -ext_output < test.txt > result.txt```
-- app.py 會用 subprocess 呼叫其他 python 檔, 所以 python 檔所寫的路徑都是相對於 app.py 的路徑, 請確保檔案的路徑正確,例如<br> 
-https://github.com/michael54856/AIOT_final/blob/9ca3ca8b767a1c71ad1ee8d2d470d853956aec5c/stock.py#L283
+- ```app.py``` 會用 subprocess 呼叫其他 python 檔, 所以 python 檔所寫的路徑都是相對於 ```app.py``` 的路徑, 請確保檔案的路徑正確,例如<br> 
+https://github.com/michael54856/AIOT_final/blob/9ca3ca8b767a1c71ad1ee8d2d470d853956aec5c/stock.py#L283<br>
+因為檔案結構如下, 如果 ```app.py``` 想寫檔案 ```stock_predictions.txt``` 到 ```Stock``` 資料夾底下, 相對路徑須設為 ```./Stock/stock_predictions.txt```
+```
+darknet
+│      
+└───Stock
+│      │  stock.py
+|
+| app.py
+|......
+```
+- 需安裝 ```pytorch``` 及 ```tensorflow``` , GPT2-chitchat (聊天機器人) 會使用到 , 建議 gpu 不然會跑很久
 
 ## 參考資料
 - [darknet](https://github.com/AlexeyAB/darknet)
