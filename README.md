@@ -102,7 +102,7 @@ darknet
 ![alt text](https://github.com/Kenhchs/Image/blob/main/linebot1.png)<br>
 - 輸入 ```Provider name``` 按 ```Create```
 ![alt text](https://github.com/Kenhchs/Image/blob/main/linebot2.png)<br>
-- 選擇 ```Create a Messaging API channel``` , 填寫資訊 , 按 ```Create``` , 接著按 ```OK```, 最後按 ```同意```
+- 選擇 ```Create a Messaging API channel``` , 填寫資訊 , 按 ```Create``` , 接著按 ```OK``` , 最後按 ```同意```
 ![alt text](https://github.com/Kenhchs/Image/blob/main/linebot3.png)<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/linebot4.png)<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/linebot5.png)<br>
