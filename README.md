@@ -157,8 +157,6 @@ darknet
 
 ### 6. 提醒
 - 此專案是在 Ubuntu 18.04 LTS 執行, 如需 <br>
-https://github.com/stevemar/code-reference-in-readme/blob/031e04f922c14ecd5b03a79d8c979ba8f3ab1e39/src/main.py#L1-L6
-
 
 ## 參考資料
 - [darknet](https://github.com/AlexeyAB/darknet)
