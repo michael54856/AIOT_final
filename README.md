@@ -156,7 +156,10 @@ darknet
 <img src="https://github.com/Kenhchs/Image/blob/main/execute7.png" alt="Cover" width="50%"/>
 
 ### 6. 提醒
-- 此專案是在 Ubuntu 18.04 LTS 執行, 如需 <br>
+- 由於此專案是在 Ubuntu 18.04 LTS 執行, 如需更改成其他平台，請將 python 檔裡不屬於欲使用平台的指令更改掉<br>
+- 例如 https://github.com/michael54856/AIOT_final/blob/9ca3ca8b767a1c71ad1ee8d2d470d853956aec5c/app.py#L226<br>
+- app.py 會用 subprocess 呼叫其他 python 檔, 所以 python 檔所寫的路徑都是相對於 app.py 的路徑, 請確保檔案的路徑正確<br>
+- 例如 https://github.com/michael54856/AIOT_final/blob/9ca3ca8b767a1c71ad1ee8d2d470d853956aec5c/stock.py#L283
 
 ## 參考資料
 - [darknet](https://github.com/AlexeyAB/darknet)
