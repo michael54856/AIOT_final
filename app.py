@@ -176,6 +176,9 @@ def handle_message(event):
 
 		else:
 			if mode == chat_bot:
+				fw = open('./GPT2-chitchat/user_content.txt', 'w')
+				fw.write(event.message.text)
+				fw.close()
 				command = ("python3 ./GPT2-chitchat/chat.py --model_path ./GPT2-chitchat/model --device 0")
 				print("chat_bot running")
 				subprocess.call(command, shell=True)
@@ -395,14 +398,14 @@ def handle_video_message(event):
 			mode = chat_bot
 			video_list = []
 			
-			command = ("ffmpeg -i -y ./ActionScoring_Video/SampleRenderedOutput.avi ./ActionScoring_Video/SampleRenderedOutput.mp4")
+			command = ("ffmpeg -i ./ActionScoring_Video/SampleRenderedOutput.avi ./ActionScoring_Video/SampleRenderedOutput.mp4")
 			subprocess.call(command, shell=True)
+			command = ("ffmpeg -i ./ActionScoring_Video/CompareRenderedOutput.avi ./ActionScoring_Video/CompareRenderedOutput.mp4")
+			subprocess.call(command, shell=True)
+			
 			uploaded_video = upload_vedio("./ActionScoring_Video/SampleRenderedOutput.mp4")
 			video_message = VideoSendMessage(original_content_url=uploaded_video, preview_image_url='https://imgur.com/Qf7sRds')
 			video_list.append(video_message)
-
-			command = ("ffmpeg -i -y ./ActionScoring_Video/CompareRenderedOutput.avi ./ActionScoring_Video/CompareRenderedOutput.mp4")
-			subprocess.call(command, shell=True)
 			uploaded_video = upload_vedio("./ActionScoring_Video/CompareRenderedOutput.mp4")
 			video_message = VideoSendMessage(original_content_url=uploaded_video, preview_image_url='https://imgur.com/Qf7sRds')
 			video_list.append(video_message)
@@ -413,6 +416,8 @@ def handle_video_message(event):
 			text_message = TextSendMessage(text=grade_video + "分")
 
 			line_bot_api.reply_message(event.reply_token, [video_list[0], video_list[1], text_message])
+			command = ('rm ./ActionScoring_Video/SampleRenderedOutput.mp4 ./ActionScoring_Video/CompareRenderedOutput.mp4 ./ActionScoring_Video/SampleRenderedOutput.avi ./ActionScoring_Video/CompareRenderedOutput.avi')
+			subprocess.call(command, shell=True)
 
 	else:
 		line_bot_api.reply_message(event.reply_token,TextSendMessage(text='系統錯誤(video handler)'))
