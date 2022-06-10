@@ -148,9 +148,9 @@ darknet
 ![alt text](https://github.com/Kenhchs/Image/blob/main/execute3.png)<br>
 - 到創建的 [LINE Bot](#3-line-bot)找到 ```Webhook URL```, 輸入才複製的再加上 ```/callback```
 ![alt text](https://github.com/Kenhchs/Image/blob/main/execute4.png)<br>
-- 按下 ```verify```<br>
+- 按下 ```Verify```<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/execute5.png)<br>
-- 成功的話會顯示 ```success```<br>
+- 成功的話會顯示 ```Success```<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/execute6.png)<br>
 - 以上步驟做完即可開始使用 LINE Bot<br>
 <img src="https://github.com/Kenhchs/Image/blob/main/execute7.png" alt="Cover" width="50%"/>
