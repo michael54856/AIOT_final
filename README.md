@@ -11,13 +11,15 @@
 ### 1. 檔案結構
 - 下載 [pytorch_model.bin](https://github.com/Kenhchs/large-files/blob/main/GPT2/pytorch_model.bin?raw=true),  [config.json](https://github.com/Kenhchs/large-files/blob/main/GPT2/config.json?raw=true),  [coin_counter_29_v2.weights](https://github.com/Kenhchs/large-files/blob/main/yolov4/coin_counter_29_v2.weights?raw=true),  [mask_137.weights](https://github.com/Kenhchs/large-files/blob/main/yolov4/mask_137.weights?raw=true)
 
+- 在 ```ActionScoring_Image``` 裡創建3個資料夾名稱為 ```Image```, ```outputJson```, ```RenderImage```
+- ```ActionScoring_Video``` 裡創建3個資料夾名稱為 ```CompareJson```, ```SampleJson```, ```VideoSource```
 - 將 ```pytorch_model.bin``` 和 ```config.json``` 放到 ```GPT2-chitchat/model/```
 - 將 ```chat.py``` 放到 ```GPT2-chitchat/```
 - 將 ```GPT2-chitchat``` 放到 ```darknet/```
 - 在 ```darknet/``` 創建 ```Stock``` 資料夾再把 ```stock.py``` 放到 ```Stock/```
 - 將 ```coin_counter_29.cfg``` 和 ```mask_137.cfg``` 放到 ```darknet/cfg/```
 - 將 ```coin_counter_29.data``` 和 ```mask_137.data``` 放到 ```darknet/data/``` 
-- 將 ```app.py```, ```auth.ini```, ```coin_counter_29_v2.weights```, ```mask_137.weights```, ```openpose```, ```ActionScoring_Image``` 放到 ```darknet/```
+- 將 ```app.py```, ```auth.ini```, ```coin_counter_29_v2.weights```, ```mask_137.weights```, ```openpose```, ```ActionScoring_Image```, ```ActionScoring_Video``` 放到 ```darknet/```
 - 檔案結構如下
 ```
 darknet
@@ -25,9 +27,20 @@ darknet
 │
 |
 └───ActionScoring_Image
-|      |......
-|      
-|      
+|      |  Image
+|      |  outputJson
+|      |  RenderImage
+|      |  ImageJudge.py
+|
+|
+└───ActionScoring_Video
+|      |  CompareJson
+|      |  SampleJson
+|      |  VideoSource
+|      |  FinalVideoScore.txt
+|      |  videoJudger.py
+|
+|
 └───GPT2-chitchat
 │      └───model
 |      |     |  pytorch_model.bin
