@@ -51,21 +51,27 @@ def stock_prediction():
 	Time_Interval = input[1]
 
 	# Get the date 
-	now = dt.datetime.now()
-	start = dt.datetime(now.year - 15, 1, 1)
-	end = dt.datetime(now.year, now.month, now.day)
-	
+	try:
+		now = dt.datetime.now()
+		start = dt.datetime(now.year - 15, 1, 1)
+		end = dt.datetime(now.year, now.month, now.day)
+	except:
+		print("Get date error")
+
 	# Three modes, long term, mid term, or short term
 	SET_DAYS_OF_PREDICTIONS(Time_Interval)
 
 	# Get the stock quote
-	df = web.DataReader(company, data_source='yahoo', start=start, end=end)
+	try:
+		df = web.DataReader(company, data_source='yahoo', start=start, end=end)
+	except:
+		print("Get stock quote error")
 
 	# Show the data
-	print(df)
+	# print(df)
 
 	# Get the number of rows and columns in the data set
-	print(df.shape)
+	# print(df.shape)
 
 	# Visualize the closing price price history
 	'''plt.figure(figsize=(16, 8))
@@ -76,126 +82,186 @@ def stock_prediction():
 	plt.show()'''
 
 	# Create a new dataframe with only the 'Close' column
-	data = df.filter(['Close'])
-	print(data)
+	try:
+		data = df.filter(['Close'])
+	except:
+		print("Create a new dataframe with only the 'Close' column error")
+	# print(data)
 
 	# Convert the dataframe to a numpy array
-	dataset = data.values
-	print(dataset.shape)
+	try:
+		dataset = data.values
+	except:
+		print("Convert the dataframe to a numpy array error")
+	# print(dataset.shape)
 
 	# Get the number of rows to train the model on
-	training_data_len = len(dataset)
+	try:
+		training_data_len = len(dataset)
+	except:
+		print("Get the number of rows to train the model on error")
 
 	# Scale the data
-	scaler = MinMaxScaler(feature_range=(0, 1))
-	scaled_data = scaler.fit_transform(dataset)
+	try:
+		scaler = MinMaxScaler(feature_range=(0, 1))
+		scaled_data = scaler.fit_transform(dataset)
+	except:
+		print("Scale the data")
 
 	# Create the training dataset and the scaled traing dataset
-	train_data = scaled_data[0:training_data_len, :]
+	try:
+		train_data = scaled_data[0:training_data_len, :]
+	except:
+		print("Create the training dataset and the scaled traing dataset error")
 
 	# Split the data into x_train and y_train datasets
-	x_train = []
-	y_train = []
-	for i in range(past_days_to_predict_now, len(train_data)):
-		x_train.append(train_data[i-past_days_to_predict_now:i, 0])
-		y_train.append(train_data[i, 0])
+	try:
+		x_train = []
+		y_train = []
+		for i in range(past_days_to_predict_now, len(train_data)):
+			x_train.append(train_data[i-past_days_to_predict_now:i, 0])
+			y_train.append(train_data[i, 0])
+	except:
+		print("Split the data into x_train and y_train datasets error")
 
 	# Convert the x_train and y_train to numpy arrays
-	x_train, y_train = np.array(x_train), np.array(y_train)
+	try:
+		x_train, y_train = np.array(x_train), np.array(y_train)
+	except:
+		print("Convert the x_train and y_train to numpy arrays error")
 
 	# Reshape the data
-	x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
+	try:
+		x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
+	except:
+		print("Reshape the data error")
 
 	# Build the LSTM model
-	model = Sequential()
-	model.add(LSTM(50, return_sequences=True, input_shape=(x_train.shape[1], 1)))
-	model.add(LSTM(50, return_sequences=False))
-	model.add(Dense(25))
-	model.add(Dense(1))
+	try:
+		model = Sequential()
+		model.add(LSTM(50, return_sequences=True, input_shape=(x_train.shape[1], 1)))
+		model.add(LSTM(50, return_sequences=False))
+		model.add(Dense(25))
+		model.add(Dense(1))
+	except:
+		print("Build the LSTM model error")
 
 	# Complie the model
-	model.compile(optimizer='adam', loss='mean_squared_error')
+	try:
+		model.compile(optimizer='adam', loss='mean_squared_error')
+	except:
+		print("Compile the model error")
 
 	# Train the model
-	model.fit(x_train, y_train, batch_size=2048, epochs=30)
+	try:
+		model.fit(x_train, y_train, batch_size=2048, epochs=30)
+	except:
+		print("Train the model error")
 
 	# Create the testing dataset
 	# Create a new array containing scaled values from index 1543 to 2003
-	test_data = scaled_data
+	try:
+		test_data = scaled_data
+	except:
+		print("Create the testing dataset error")
 
 	# Create the datasets x_test and y_test
-	x_test = []
-	y_test = dataset[training_data_len:, :]
-	for i in range(past_days_to_predict_now, len(test_data)):
-		x_test.append(test_data[i-past_days_to_predict_now:i, 0])
+	try:
+		x_test = []
+		y_test = dataset[training_data_len:, :]
+		for i in range(past_days_to_predict_now, len(test_data)):
+			x_test.append(test_data[i-past_days_to_predict_now:i, 0])
+	except:
+		print("Create the datasets x_test and y_test error")
 
 	# Convert the data to a numpy array
-	x_test = np.array(x_test)
+	try:
+		x_test = np.array(x_test)
+	except:
+		print("Convert the data to a numpy array error")
 
 	# Reshape the data
-	x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
+	try:
+		x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
+	except:
+		print("Reshape the data error")
 
 	# Get the model predicted values
-	predictions = model.predict(x_test)
-	predictions = scaler.inverse_transform(predictions)
+	try:
+		predictions = model.predict(x_test)
+		predictions = scaler.inverse_transform(predictions)
+	except:
+		print("Get the model predicted values error")
 
 	# Plot the data
-	valid = data[past_days_to_predict_now:training_data_len]
-	valid['Predictions'] = predictions
+	try:
+		valid = data[past_days_to_predict_now:training_data_len]
+		valid['Predictions'] = predictions
+	except:
+		print("Plot the data error")
 
 	# Get the quote
-	apple_quote = web.DataReader(company, data_source='yahoo', start=start, end=end)
-	new_df = apple_quote.filter(['Close'])
-	for i in range(nubmer_of_days_want_to_predict):
-		NextDay_Date = dt.datetime.today() + dt.timedelta(days=i+1)
-		NextDay_Date = str(NextDay_Date)
-		year = int(NextDay_Date[0:4])
-		month = int(NextDay_Date[5:7])
-		date = int(NextDay_Date[8:10])
-		last_60_days = new_df[-60:].values
-		last_60_days_scaled = scaler.transform(last_60_days)
-		X_test = []
-		X_test.append(last_60_days_scaled)
-		X_test = np.array(X_test)
-		X_test = np.reshape(X_test, (X_test.shape[0], X_test.shape[1], 1))
-		pred_price = model.predict(X_test)
-		pred_price = scaler.inverse_transform(pred_price)
-		new_df.loc[pd.Timestamp(year, month, date, 0)] = [pred_price[0][0]]
+	try:
+		apple_quote = web.DataReader(company, data_source='yahoo', start=start, end=end)
+		new_df = apple_quote.filter(['Close'])
+		for i in range(nubmer_of_days_want_to_predict):
+			NextDay_Date = dt.datetime.today() + dt.timedelta(days=i+1)
+			NextDay_Date = str(NextDay_Date)
+			year = int(NextDay_Date[0:4])
+			month = int(NextDay_Date[5:7])
+			date = int(NextDay_Date[8:10])
+			last_60_days = new_df[-60:].values
+			last_60_days_scaled = scaler.transform(last_60_days)
+			X_test = []
+			X_test.append(last_60_days_scaled)
+			X_test = np.array(X_test)
+			X_test = np.reshape(X_test, (X_test.shape[0], X_test.shape[1], 1))
+			pred_price = model.predict(X_test)
+			pred_price = scaler.inverse_transform(pred_price)
+			new_df.loc[pd.Timestamp(year, month, date, 0)] = [pred_price[0][0]]
+	except:
+		print("Get the quote erro")
 
 	# Visualize the data
-	print(valid.shape)
-	print(training_data_len)
-	predictions = new_df[training_data_len:]
-	train = new_df[training_data_len - see_past_days:training_data_len]
-	valid = valid[-1 *  see_past_days:]
-	print(train.shape, valid.shape)
-	plt.figure(figsize=(16, 8))
-	plt.xlabel('Date', fontsize=18)
-	plt.ylabel('Close Price', fontsize=18)
-	plt.title('{}'.format(company))
-	plt.plot(train[['Close']])
-	plt.plot(valid[['Predictions']])
-	plt.plot(predictions[['Close']])
-	plt.axvline(x=end, color='k', linestyle='--')
-	plt.legend(['Real', 'Predictions', 'Unknown'], loc='lower right')
-	plt.savefig('./Stock/Stock_prediction.png') # becuase it is called by app.py in darknet
+	try:
+		#print(valid.shape)
+		#print(training_data_len)
+		predictions = new_df[training_data_len:]
+		train = new_df[training_data_len - see_past_days:training_data_len]
+		valid = valid[-1 *  see_past_days:]
+		#print(train.shape, valid.shape)
+		plt.figure(figsize=(16, 8))
+		plt.xlabel('Date', fontsize=18)
+		plt.ylabel('Close Price', fontsize=18)
+		plt.title('{}'.format(company))
+		plt.plot(train[['Close']])
+		plt.plot(valid[['Predictions']])
+		plt.plot(predictions[['Close']])
+		plt.axvline(x=end, color='k', linestyle='--')
+		plt.legend(['Real', 'Predictions', 'Unknown'], loc='lower right')
+		plt.savefig('./Stock/Stock_prediction.png') # becuase it is called by app.py in darknet
+	except:
+		print("Visualize the data error")
 
-	print(predictions)
-	print(train)
-	print(valid)
+	#print(predictions)
+	#print(train)
+	#print(valid)
 
 	# Print the predictions
-	step_size = nubmer_of_days_want_to_predict // 6
-	if nubmer_of_days_want_to_predict == 7:
-		step_size = 1
-	print("預測收盤價:")
-	fw = open("./Stock/stock_predictions.txt", "w")
-	fw.write("預測收盤價:\n")
-	for i in range(0, nubmer_of_days_want_to_predict, step_size):
-		temp_date = (str(predictions.index[i]))[0:10]
-		temp_prediction = predictions['Close'][i]
-		print('%s\t\t\t\t\t%.2f' % (temp_date, temp_prediction))
-		fw.write('%s\t\t\t\t\t\t\t\t%.2f\n' % (temp_date, temp_prediction))
-	fw.close()
+	try:
+		step_size = nubmer_of_days_want_to_predict // 6
+		if nubmer_of_days_want_to_predict == 7:
+			step_size = 1
+		print("預測收盤價:")
+		fw = open("./Stock/stock_predictions.txt", "w")
+		fw.write("預測收盤價:\n")
+		for i in range(0, nubmer_of_days_want_to_predict, step_size):
+			temp_date = (str(predictions.index[i]))[0:10]
+			temp_prediction = predictions['Close'][i]
+			print('%s\t\t\t\t\t%.2f' % (temp_date, temp_prediction))
+			fw.write('%s\t\t\t\t\t\t\t\t%.2f\n' % (temp_date, temp_prediction))
+		fw.close()
+	except:
+		print("Print the predictions error")
 
 stock_prediction()
