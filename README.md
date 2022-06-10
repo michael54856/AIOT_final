@@ -130,7 +130,7 @@ darknet
 - 步驟3 同步驟1 ,但中間輸入變 [步驟3 json檔](https://github.com/Kenhchs/Image/blob/main/Postman2.json)
 - 步驟4 同步驟2 ,但圖片改成 ```menu_2.JPG```, ```richMenuId``` 改成步驟3得到的
 - 步驟5 同步驟1 ,但中間輸入變 [步驟5 json檔](https://github.com/Kenhchs/Image/blob/main/Postman3.json)
-- 步驟6 同步驟2 ,但圖片改成 ```menu_3.JPG``````richMenuId``` 改成步驟5得到的
+- 步驟6 同步驟2 ,但圖片改成 ```menu_3.JPG```, ```richMenuId``` 改成步驟5得到的
 - 步驟7 Post 輸入 ```https://api.line.me/v2/bot/user/all/richmenu/{步驟1得到的 richMenuId}```, 最後按 ```Send```
 ![alt text](https://github.com/Kenhchs/Image/blob/main/Postman6.png)<br>
 - 步驟8 Post 輸入 ```https://api.line.me/v2/bot/richmenu/alias```, 點 ```Headers``` 增加 ```Content-Type``` 和 ```application/json```,  點 ```Body``` 然後點 ```raw``` 中間輸入如下圖所示其中 ```richMenuAliasId``` 填 ```步驟1得到的 richMenuId```, 最後按 ```Send```
