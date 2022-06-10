@@ -93,7 +93,7 @@ darknet
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur7.png)<br>
 - 填完後按下 Request Token , 就會出現一個要登入 Imgur 帳號的視窗<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur8.png)<br>
-- 最終得到下圖, 打開 ```auth.ini``` , ```imgur_Access_Token``` 填入下圖的 ```Access Token```<br>
+- 最終得到下圖 , 打開 ```auth.ini``` , ```imgur_Access_Token``` 填入下圖的 ```Access Token```<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur9.png)<br>
 
 ### 3. LINE Bot
