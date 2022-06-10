@@ -140,8 +140,8 @@ darknet
 - 步驟10 同 步驟8, 其中 ```richMenuAliasId``` 改成 ```richmenu-alias-3```, ```richMenuId``` 改成 ```步驟5得到的 richMenuId```
 
 ### 5. 執行
-到 ```darknet``` 執行 ```app.py```<br>
-- ![alt text](https://github.com/Kenhchs/Image/blob/main/execute1.png)<br>
+- 到 ```darknet``` 執行 ```app.py```<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/execute1.png)<br>
 開一個新的 terminal 打 ```ngrok http 5000```<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/execute2.png)<br>
 - 找到有 https的複製起來<br>
