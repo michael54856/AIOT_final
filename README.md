@@ -139,6 +139,22 @@ darknet
 - 步驟9 同 步驟8, 其中 ```richMenuAliasId``` 改成 ```richmenu-alias-2```, ```richMenuId``` 改成 ```步驟3得到的 richMenuId```
 - 步驟10 同 步驟8, 其中 ```richMenuAliasId``` 改成 ```richmenu-alias-3```, ```richMenuId``` 改成 ```步驟5得到的 richMenuId```
 
+### 5. 執行
+- 到 ```darknet``` 執行 ```app.py```<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/execute1.png)<br>
+- 開一個新的 terminal 打 ```ngrok http 5000```<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/execute2.png)<br>
+- 找到有 https的複製起來<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/execute3.png)<br>
+- 到創建的 [LINE Bot](#3-line-bot)找到 ```Webhook URL```, 輸入才複製的再加上 ```/callback```
+![alt text](https://github.com/Kenhchs/Image/blob/main/execute4.png)<br>
+- 按下 ```Verify```<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/execute5.png)<br>
+- 成功的話會顯示 ```Success```<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/execute6.png)<br>
+- 以上步驟做完即可開始使用 LINE Bot<br>
+<img src="https://github.com/Kenhchs/Image/blob/main/execute7.png" alt="Cover" width="50%"/>
+
 ## 參考資料
 - [darknet](https://github.com/AlexeyAB/darknet)
 - [openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)
