@@ -171,7 +171,7 @@ darknet
 | app.py
 |......
 ```
-- 需安裝 ```pytorch``` 及 ```tensorflow``` , GPT2-chitchat (聊天機器人) 會使用到 , 建議 gpu 不然會跑很久
+- 需安裝 ```pytorch``` 及 ```tensorflow``` , GPT2-chitchat(聊天機器人)會使用到 , 建議 gpu 不然會跑很久
 - [ngrok http 5000](#5-執行) 每次重新啟用都需修改 ```Webhook URL```
 - ```python3 app.py``` 需先於 [Verify Webhook URL](#5-執行) , 以免失敗
 
