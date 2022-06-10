@@ -17,7 +17,7 @@
 - 在 ```darknet/``` 創建 ```Stock``` 資料夾再把 ```stock.py``` 放到 ```Stock/```
 - 將 ```coin_counter_29.cfg``` 和 ```mask_137.cfg``` 放到 ```darknet/cfg/```
 - 將 ```coin_counter_29.data``` 和 ```mask_137.data``` 放到 ```darknet/data/``` 
-- 將 ```app.py```, ```auth.ini```, ```coin_counter_29_v2.weights```, ```mask_137.weights```, ```openpose```, ```ActionScoring_Image``` 放到 ```darknet/```
+- 將 ```app.py```, ```auth.ini```, ```coin_counter_29_v2.weights```, ```mask_137.weights```, ```openpose```, ```ActionScoring_Image```, ```ActionScoring_Video``` 放到 ```darknet/```
 - 檔案結構如下
 ```
 darknet
@@ -25,9 +25,20 @@ darknet
 │
 |
 └───ActionScoring_Image
-|      |......
-|      
-|      
+|      |  Image
+|      |  outputJson
+|      |  RenderImage
+|      |  ImageJudge.py
+|
+|
+└───ActionScoring_Video
+|      |  CompareJson
+|      |  SampleJson
+|      |  VideoSource
+|      |  FinalVideoScore.txt
+|      |  videoJudger.py
+|
+|
 └───GPT2-chitchat
 │      └───model
 |      |     |  pytorch_model.bin
