@@ -25,11 +25,10 @@
 - 在 ```ActionScoring_Video``` 裡創建3個資料夾名稱為 ```CompareJson``` , ```SampleJson``` , ```VideoSource```
 - 將 ```pytorch_model.bin``` 和 ```config.json``` 放到 ```GPT2-chitchat/model/```
 - 將 ```chat.py``` 放到 ```GPT2-chitchat/```
-- 將 ```GPT2-chitchat``` 放到 ```darknet/```
 - 在 ```darknet/``` 創建 ```Stock``` 資料夾再把 ```stock.py``` 放到 ```Stock/```
 - 將 ```coin_counter_29.cfg``` 和 ```mask_137.cfg``` 放到 ```darknet/cfg/```
 - 將 ```coin_counter_29.data``` 和 ```mask_137.data``` 放到 ```darknet/data/``` 
-- 將 ```app.py``` , ```auth.ini``` , ```coin_counter_29_v2.weights``` , ```mask_137.weights``` , ```openpose``` , ```ActionScoring_Image``` , ```ActionScoring_Video``` 放到 ```darknet/```
+- 將 ```app.py``` , ```auth.ini``` , ```coin_counter_29_v2.weights``` , ```mask_137.weights``` , ```openpose``` , ```GPT2-chitchat``` , ```ActionScoring_Image``` , ```ActionScoring_Video``` 放到 ```darknet/```
 - 檔案結構如下
 ```
 darknet
@@ -81,6 +80,7 @@ darknet
 | auth.ini
 | coin_counter_29_v2.weights
 | mask_137.weights
+| openpose
 |......
 ```
 ### 2. Imgur
