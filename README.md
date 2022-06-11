@@ -12,7 +12,7 @@
 - 下載 [pytorch_model.bin](https://github.com/Kenhchs/large-files/blob/main/GPT2/pytorch_model.bin?raw=true) , [config.json](https://github.com/Kenhchs/large-files/blob/main/GPT2/config.json?raw=true) , [coin_counter_29_v2.weights](https://github.com/Kenhchs/large-files/blob/main/yolov4/coin_counter_29_v2.weights?raw=true) ,  [mask_137.weights](https://github.com/Kenhchs/large-files/blob/main/yolov4/mask_137.weights?raw=true)
 
 - 在 ```ActionScoring_Image``` 裡創建3個資料夾名稱為 ```Image``` , ```outputJson``` , ```RenderImage```
-- ```ActionScoring_Video``` 裡創建3個資料夾名稱為 ```CompareJson``` , ```SampleJson``` , ```VideoSource```
+- 在 ```ActionScoring_Video``` 裡創建3個資料夾名稱為 ```CompareJson``` , ```SampleJson``` , ```VideoSource```
 - 將 ```pytorch_model.bin``` 和 ```config.json``` 放到 ```GPT2-chitchat/model/```
 - 將 ```chat.py``` 放到 ```GPT2-chitchat/```
 - 將 ```GPT2-chitchat``` 放到 ```darknet/```
@@ -84,7 +84,7 @@ darknet
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur3.png)<br>
 - 按下 ```Redirect``` 的 ```edit``` , 輸入 ```https://www.getpostman.com/oauth2/callback``` , 再按下 ```update``` <br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur4.png)<br>
-- 下載 [Postman](https://www.postman.com/downloads/)<br>
+- 下載 [Postman](https://www.postman.com/downloads/)(網頁版有些地方不能修改)<br>
 - 開啟 Postman , 選擇新建 ```Request```<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/imgur5.png)<br>
 - ```TYPE``` 選擇 ```OAuth 2.0``` , 再點 ```Get New Access Token```<br>
@@ -140,13 +140,13 @@ darknet
 - 步驟10 同 步驟8 , 其中 ```richMenuAliasId``` 改成 ```richmenu-alias-3``` , ```richMenuId``` 改成 ```步驟5得到的 richMenuId```
 
 ### 5. 執行
-- 到 ```darknet``` 執行 ```app.py```<br>
+- 到 ```darknet``` 執行 ```python3 app.py```<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/execute1.png)<br>
 - 開一個新的 terminal 打 ```ngrok http 5000```<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/execute2.png)<br>
 - 找到有 https 的複製起來<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/execute3.png)<br>
-- 到創建的 [LINE Bot](#3-line-bot)找到 ```Webhook URL``` , 輸入才複製的再加上 ```/callback```
+- 到創建的 [LINE Bot](#3-line-bot) 找到 ```Webhook URL``` , 輸入剛才複製的再加上 ```/callback```
 ![alt text](https://github.com/Kenhchs/Image/blob/main/execute4.png)<br>
 - 按下 ```Verify```<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/execute5.png)<br>
@@ -155,7 +155,8 @@ darknet
 - 以上步驟做完即可開始使用 LINE Bot<br>
 <img src="https://github.com/Kenhchs/Image/blob/main/execute7.png" alt="Cover" width="50%"/>
 
-### 6. 提醒
+## 提醒
+- 以下 python 檔指的是此 repository 的 python 檔 , [要求](#要求)中的不用更改
 - 由於此專案是在 Ubuntu 18.04 LTS 執行 , 如需更改成其他平台 , 請將 python 檔裡不屬於欲使用平台的指令更改掉 , 例如<br>
 https://github.com/michael54856/AIOT_final/blob/9ca3ca8b767a1c71ad1ee8d2d470d853956aec5c/app.py#L226<br>
 在 Windows 下需改成 ```darknet.exe detector test data/coin_counter_29.data cfg/coin_counter_29.cfg coin_counter_29_v2.weights -dont_show -ext_output < test.txt > result.txt```
@@ -171,9 +172,15 @@ darknet
 | app.py
 |......
 ```
-- 需安裝 ```pytorch``` 及 ```tensorflow``` , GPT2-chitchat(聊天機器人)會使用到 , 建議 gpu 不然會跑很久
-- [ngrok http 5000](#5-執行) 每次重新啟用都需修改 ```Webhook URL```
-- ```python3 app.py``` 需先於 [Verify Webhook URL](#5-執行) , 以免失敗
+- 需安裝 ```pytorch``` 及 ```tensorflow``` , GPT2-chitchat(聊天機器人)會使用到 , 建議 gpu 不然會跑很久<br>
+- [ngrok http 5000](#5-執行) 每次重新啟用都需修改 ```Webhook URL```<br>
+- ```python3 app.py``` 需先於 [Verify Webhook URL](#5-執行) , 以免失敗<br>
+- 如果動作評分出現 ```error == cudaSuccess (2 vs. 0) out of memory``` , 請將 ```--net_resolution``` 後面的 ```336x336``` 調低且兩個數字均須為16之倍數<br>
+  - 相片請修改以下<br>
+    https://github.com/michael54856/AIOT_final/blob/85120060d8d26c328253cb76536da7819f074592/ActionScoring_Image/ImageJudge.py#L175<br>
+  - 影片請修改以下<br>
+    https://github.com/michael54856/AIOT_final/blob/85120060d8d26c328253cb76536da7819f074592/ActionScoring_Video/videoJudger.py#L156-L158<br>
+- 填寫 ```auth.ini``` 時不能有空格 , 例如你的 ```imgur access token``` 是 ```12345678910``` , 要填成 ```imgur_Access_Token=12345678910``` , 而不可以填成 ```imgur_Access_Token = 12345678910```
 
 ## 參考資料
 - [darknet](https://github.com/AlexeyAB/darknet)
@@ -182,3 +189,10 @@ darknet
 - [OpenCC](https://github.com/BYVoid/OpenCC)
 - [Yolov4 Installation](https://medium.com/geekculture/yolov4-darknet-installation-and-usage-on-your-system-windows-linux-8dec2cea6e81)
 - [Messaging API](https://developers.line.biz/en/docs/messaging-api/)
+- [openpose Installation](https://www.youtube.com/watch?v=RSn8jVPopZo)
+- [available-line-url-schemes](https://developers.line.biz/en/docs/line-login/using-line-url-scheme/#available-line-url-schemes)
+- [imgur API (Part 1/3)](https://www.youtube.com/watch?v=OiDQu-0-DIA)
+- [imgur API (Part 2/3)](https://www.youtube.com/watch?v=kDcn_Tn-ti8)
+- [imgur API (Part 3/3)](https://www.youtube.com/watch?v=MyCr8kPT3OI&t=5s)
+- [Imgur API：upload, load 上傳、讀取 心得筆記](https://medium.com/front-end-augustus-study-notes/imgur-api-3a41f2848bb8)
+- [Using rich menus](https://developers.line.biz/en/docs/messaging-api/using-rich-menus/)
