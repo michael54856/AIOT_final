@@ -183,3 +183,4 @@ darknet
 - [OpenCC](https://github.com/BYVoid/OpenCC)
 - [Yolov4 Installation](https://medium.com/geekculture/yolov4-darknet-installation-and-usage-on-your-system-windows-linux-8dec2cea6e81)
 - [Messaging API](https://developers.line.biz/en/docs/messaging-api/)
+- [openpose Installation](https://www.youtube.com/watch?v=RSn8jVPopZo)
