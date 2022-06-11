@@ -180,6 +180,7 @@ darknet
     https://github.com/michael54856/AIOT_final/blob/85120060d8d26c328253cb76536da7819f074592/ActionScoring_Image/ImageJudge.py#L175<br>
   - 影片請修改以下<br>
     https://github.com/michael54856/AIOT_final/blob/85120060d8d26c328253cb76536da7819f074592/ActionScoring_Video/videoJudger.py#L156-L158<br>
+- 填寫 ```auth.ini``` 時不能有空格 , 例如你的 ```imgur access token``` 是 ```12345678910``` , 要填成 ```imgur_Access_Token=12345678910``` , 而不可以填成 ```imgur_Access_Token = 12345678910```
 
 ## 參考資料
 - [darknet](https://github.com/AlexeyAB/darknet)
