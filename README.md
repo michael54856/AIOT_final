@@ -146,7 +146,7 @@ darknet
 ![alt text](https://github.com/Kenhchs/Image/blob/main/execute2.png)<br>
 - 找到有 https 的複製起來<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/execute3.png)<br>
-- 到創建的 [LINE Bot](#3-line-bot)找到 ```Webhook URL``` , 輸入剛才複製的再加上 ```/callback```
+- 到創建的 [LINE Bot](#3-line-bot) 找到 ```Webhook URL``` , 輸入剛才複製的再加上 ```/callback```
 ![alt text](https://github.com/Kenhchs/Image/blob/main/execute4.png)<br>
 - 按下 ```Verify```<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/execute5.png)<br>
