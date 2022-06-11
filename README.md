@@ -191,3 +191,6 @@ darknet
 - [Messaging API](https://developers.line.biz/en/docs/messaging-api/)
 - [openpose Installation](https://www.youtube.com/watch?v=RSn8jVPopZo)
 - [available-line-url-schemes](https://developers.line.biz/en/docs/line-login/using-line-url-scheme/#available-line-url-schemes)
+- [imgur API (Part 1/3)](https://www.youtube.com/watch?v=OiDQu-0-DIA)
+- [imgur API (Part 2/3)](https://www.youtube.com/watch?v=kDcn_Tn-ti8)
+- [imgur API (Part 3/3)](https://www.youtube.com/watch?v=MyCr8kPT3OI&t=5s)
