@@ -125,6 +125,8 @@ darknet
 - 到 Basic settings 點選 ```LINE Official Account Manager``` , 點選 ```回應設定``` , 將基本設定與進階設定調整成下圖所示
 ![alt text](https://github.com/Kenhchs/Image/blob/main/linebot10.png)<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/linebot11.png)<br>
+- 到 ```Messaging API``` 找到 ```QR code``` 加為 LINE 好友<br>
+![alt text](https://github.com/Kenhchs/Image/blob/main/linebot12.png)<br>
 
 
 ### 4. LINE 圖文選單
