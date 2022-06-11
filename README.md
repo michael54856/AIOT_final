@@ -126,7 +126,6 @@ darknet
 ![alt text](https://github.com/Kenhchs/Image/blob/main/linebot10.png)<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/linebot11.png)<br>
 - 到 ```Messaging API``` 找到 ```QR code``` 加為 LINE 好友<br>
-![alt text](https://github.com/Kenhchs/Image/blob/main/linebot12.png)<br>
 
 
 ### 4. LINE 圖文選單
