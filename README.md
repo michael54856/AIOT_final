@@ -184,7 +184,7 @@ darknet
 ```
 - 需安裝 ```pytorch``` 及 ```tensorflow``` , GPT2-chitchat(聊天機器人)會使用到 , 建議 gpu 不然會跑很久<br>
 - [ngrok http 5000](#5-執行) 每次重新啟用都需修改 ```Webhook URL```<br>
-- ```python3 app.py``` 需先於 [Verify Webhook URL](#5-執行) , 以免失敗<br>
+- ``` ngrok http 5000``` 和 ```python3 app.py``` 需先於 [Verify Webhook URL](#5-執行) , 以免失敗<br>
 - 如果動作評分出現 ```error == cudaSuccess (2 vs. 0) out of memory``` , 請將 ```--net_resolution``` 後面的 ```336x336``` 調低且兩個數字均須為16之倍數<br>
   - 相片請修改以下<br>
     https://github.com/michael54856/AIOT_final/blob/85120060d8d26c328253cb76536da7819f074592/ActionScoring_Image/ImageJudge.py#L175<br>
