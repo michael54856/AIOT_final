@@ -156,6 +156,7 @@ darknet
 <img src="https://github.com/Kenhchs/Image/blob/main/execute7.png" alt="Cover" width="50%"/>
 
 ### 6. 提醒
+- 以下 python 檔指的是此 repository 的 python 檔 , [要求](#要求)中的不用更改
 - 由於此專案是在 Ubuntu 18.04 LTS 執行 , 如需更改成其他平台 , 請將 python 檔裡不屬於欲使用平台的指令更改掉 , 例如<br>
 https://github.com/michael54856/AIOT_final/blob/9ca3ca8b767a1c71ad1ee8d2d470d853956aec5c/app.py#L226<br>
 在 Windows 下需改成 ```darknet.exe detector test data/coin_counter_29.data cfg/coin_counter_29.cfg coin_counter_29_v2.weights -dont_show -ext_output < test.txt > result.txt```
