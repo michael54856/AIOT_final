@@ -195,3 +195,4 @@ darknet
 - [imgur API (Part 2/3)](https://www.youtube.com/watch?v=kDcn_Tn-ti8)
 - [imgur API (Part 3/3)](https://www.youtube.com/watch?v=MyCr8kPT3OI&t=5s)
 - [Imgur API：upload, load 上傳、讀取 心得筆記](https://medium.com/front-end-augustus-study-notes/imgur-api-3a41f2848bb8)
+- [Using rich menus](https://developers.line.biz/en/docs/messaging-api/using-rich-menus/)
