@@ -12,7 +12,7 @@
 - 下載 [pytorch_model.bin](https://github.com/Kenhchs/large-files/blob/main/GPT2/pytorch_model.bin?raw=true) , [config.json](https://github.com/Kenhchs/large-files/blob/main/GPT2/config.json?raw=true) , [coin_counter_29_v2.weights](https://github.com/Kenhchs/large-files/blob/main/yolov4/coin_counter_29_v2.weights?raw=true) ,  [mask_137.weights](https://github.com/Kenhchs/large-files/blob/main/yolov4/mask_137.weights?raw=true)
 
 - 在 ```ActionScoring_Image``` 裡創建3個資料夾名稱為 ```Image``` , ```outputJson``` , ```RenderImage```
-- ```ActionScoring_Video``` 裡創建3個資料夾名稱為 ```CompareJson``` , ```SampleJson``` , ```VideoSource```
+- 在 ```ActionScoring_Video``` 裡創建3個資料夾名稱為 ```CompareJson``` , ```SampleJson``` , ```VideoSource```
 - 將 ```pytorch_model.bin``` 和 ```config.json``` 放到 ```GPT2-chitchat/model/```
 - 將 ```chat.py``` 放到 ```GPT2-chitchat/```
 - 將 ```GPT2-chitchat``` 放到 ```darknet/```
