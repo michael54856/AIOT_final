@@ -165,7 +165,7 @@ darknet
 - 成功的話會顯示 ```Success```<br>
 ![alt text](https://github.com/Kenhchs/Image/blob/main/execute6.png)<br>
 - 以上步驟做完即可開始使用 LINE Bot<br>
-<img src="https://github.com/Kenhchs/Image/blob/main/execute7.png" alt="Cover" width="50%"/>
+<img src="https://github.com/Kenhchs/Image/blob/main/execute8.png" alt="Cover" width="50%"/>
 
 ## 提醒
 - 以下 python 檔指的是此 repository 的 python 檔 , [要求](#要求)中的不用更改
