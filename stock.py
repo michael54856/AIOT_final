@@ -227,8 +227,8 @@ def stock_prediction():
 
 	# Get the quote
 	try:
-		apple_quote = web.DataReader(company, data_source='yahoo', start=start, end=end)
-		new_df = apple_quote.filter(['Close'])
+		quote = web.DataReader(company, data_source='yahoo', start=start, end=end)
+		new_df = quote.filter(['Close'])
 		for i in range(nubmer_of_days_want_to_predict):
 			NextDay_Date = dt.datetime.today() + dt.timedelta(days=i+1)
 			NextDay_Date = str(NextDay_Date)
