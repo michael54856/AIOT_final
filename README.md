@@ -347,7 +347,7 @@ darknet
 ### 6. 動作評分_相片-結果
 * 當我們選擇相片模式後，系統會要求上傳範本圖片，之後會要求上傳比對圖片，之後會回傳4個圖片以及評分
 * 回傳範本動作渲染圖
-  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseImageResult1.png" width="50%">
+  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseImageResult1.png" height="50%">
 * 回傳比對動作渲染圖
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseImageResult2.png">
 * 回傳範本動作骨架向量圖
