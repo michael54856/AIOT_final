@@ -31,6 +31,7 @@
   - [零錢辨識-結果](#5-零錢辨識-結果)
   - [動作評分_相片-結果](#6-動作評分_相片-結果)
   - [動作評分_影片-結果](#7-動作評分_影片-結果)
+- [示範影片](#示範影片)
 - [參考資料](#參考資料)
 
 ## 簡介
@@ -367,6 +368,12 @@ darknet
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseVideoResult3.png">
 * 系統分數與老師評分的差距:<br>
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseVideoResult4.png" width="75%">
+
+
+## 示範影片
+- 報告與程式碼講解 : 
+- 實機DEMO影片 : https://youtu.be/WatGvEkxkbo
+
 ## 參考資料
 - [darknet](https://github.com/AlexeyAB/darknet)
 - [openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)
