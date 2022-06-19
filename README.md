@@ -342,6 +342,7 @@ darknet
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/maskResult2.png">
 ### 5. 零錢辨識-結果
 * 當我們選擇進行零錢辨識之後，系統會要求上傳圖片，系統會計算```1元```、```5元```、```10元```、```50元```分別有幾個，並算出總和
+  <br>
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/coinResult.png">
 ### 6. 動作評分_相片-結果
 ### 7. 動作評分_影片-結果
