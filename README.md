@@ -23,6 +23,7 @@ Peter是一個非常忙碌的人，我們想利用A.I的能力以及Line這個�
 - 動作評分(相片)
 - 動作評分(影片)
 
+## 安裝說明
 
 ## 要求
 - [darknet](https://github.com/AlexeyAB/darknet)
@@ -31,7 +32,6 @@ Peter是一個非常忙碌的人，我們想利用A.I的能力以及Line這個�
 - [OpenCC](https://github.com/BYVoid/OpenCC)
 - 註冊 [LINE Developers](https://developers.line.biz/zh-hant/) 和 [Imgur](https://imgur.com/)
 
-## 使用說明
 
 ### 1. 檔案結構
 - 下載 [pytorch_model.bin](https://github.com/Kenhchs/large-files/blob/main/GPT2/pytorch_model.bin?raw=true) , [config.json](https://github.com/Kenhchs/large-files/blob/main/GPT2/config.json?raw=true) , [coin_counter_29_v2.weights](https://github.com/Kenhchs/large-files/blob/main/yolov4/coin_counter_29_v2.weights?raw=true) ,  [mask_137.weights](https://github.com/Kenhchs/large-files/blob/main/yolov4/mask_137.weights?raw=true)
