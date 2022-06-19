@@ -8,6 +8,12 @@
   - [零錢辨識-動機](#4-零錢辨識-動機)
   - [動作評分-動機](#5-動作評分-動機)
 - [相似研究](#相似研究)
+  - [聊天機器人-相似研究](#1-聊天機器人-相似研究)
+  - [股票預測-相似研究](#2-股票預測-相似研究)
+  - [口罩辨識-相似研究](#3-口罩辨識-相似研究)
+  - [零錢辨識-相似研究](#4-零錢辨識-相似研究)
+  - [動作評分-相似研究](#5-動作評分-相似研究)
+  - [論文參考](#論文參考)
 - [安裝說明](#安裝說明)
   - [要求](#要求)
   - [使用說明](#使用說明)
@@ -57,6 +63,43 @@ Peter是一個非常忙碌的人，我們想利用A.I的能力以及Line這個�
 * 隨著人們健康意識的抬頭，運動風氣越加盛行，相關運動產業也蓬勃發展，其中將人工智慧運用在運動領域中，能有效的幫助人們進行運動訓練，在沒有教練的情況下也能夠獲得運動回饋，進行自我姿勢矯正。
 
 ## 相似研究
+
+### 1. 聊天機器人-相似研究
+* [1]這個研究是利用Google Dialogflow 和 BERT 預訓練模型進行結合，當用戶與 Dialogflow 聊天機器人互動時，它會匹配聊天意圖並將請求發送到 BERT 模型。最後BERT 模型為聊天機器人提供答案並回覆用戶。 QAM 可針對大型數據集的問題向用戶提供準確的響應。
+* [2]這個研究在文本的生成階段，使用了Temperature、Top-k Sampling和Nucleus Sampling等技術，這是一種簡單但有效的方法，可以充分利用神經網路的生成。通過從概率分佈的動態核中採樣文本，並允許多樣性，同時有效地截斷分佈不太可靠的尾部，生成的文本更好地展示了人類文本的質量，在不犧牲流暢性和連貫性的情況下產生增強的多樣性。
+* 而我們將基於[2]的延伸，GPT2-chitchat，來執行生成中文的聊天機器人。
+
+### 2. 股票預測-相似研究
+* [6]此篇論文基於LSTM模型去預測股價，通過分析股票市場的歷史信息發現時間序列的作用，並通過LSTM神經網絡模型的選擇性記憶高級深度學習功能深入挖掘其內在規律，從而實現對股票的預測以及價格趨勢。
+* 本次的專案將會利用兩層的LSTM來建立模型，讓模型能夠獲得更佳的效能。
+
+### 3. 口罩辨識-相似研究
+* [7]這篇論文使用YOLOv4 架構，該系統被訓練以捕捉圖像和實時流中的面部面具特徵。在訓練了 4000 個 epoch 後，在實時場景中取得了顯著的效果，平均 FPS 為 49.5，mAP 為 98%。
+* 我們也將利用YOLOv4進行預測，但是除了有配戴口罩以及無配戴口罩之外，我們將多預測一種非正確配戴口罩，例如鼻子露出來。
+
+### 4. 零錢辨識-相似研究
+* [8]這篇論文採用Hough Detection Method檢測圖像中的硬幣區域，並使用半徑比、顏色特徵和相對位置約束來消除噪聲圓。並利用多層卷積神經網絡對proposal進行分類，得到最終的識別結果。
+* 為了簡化辨識，本次的研究將直接利用YOLOv4來進行。
+
+### 5. 動作評分-相似研究
+* [3]與[4]這兩項研究都是利用在身上的穿戴式裝置建立感測器網路，並利用這些資訊與範本動作進行比對。
+* 我們可看出透過穿戴式裝置蒐集運動資料並加以進行分析的應用已非常成熟。
+* 但是一般人難以擁有這些裝置，因此我們想要提供一個使用門檻低，且成本低廉的分析方式。
+* [5]是利用AlphaPose先取出動作人體的關節位置，經過數據處理後，再使用深度學習的模型將資料轉換為評測分數，這項研究類似於本次的計畫，但是將預測分數的行為交由人工智慧進行，反而會缺乏評測的彈性，我們並不知道人工智慧內部是如何計算分數，只能夠獲得結果。
+* 本次的計畫中，我們將設計一套演算法能夠有邏輯的計算節點訊息，並提供評測的彈性給使用者，我們可以讓使用者設定各部位的權重進行評測，避免出現人工智慧將頭部或是其他較不重要的資訊設為重點等尷尬情形。
+* 並且我們可以回傳該注意哪些部位來改善動作。
+
+
+### 論文參考
+* [1]N. Kanodia, K. Ahmed and Y. Miao, "Question Answering Model Based Conversational Chatbot using BERT Model and Google Dialogflow," 2021 31st International Telecommunication Networks and Applications Conference (ITNAC), 2021, pp. 19-22, doi: 10.1109/ITNAC53136.2021.9652153.
+* [2] Holtzman, A., Buys, J., Du, L., Forbes, M., & Choi, Y. (2019). The curious case of neural text degeneration. arXiv preprint arXiv:1904.09751.
+* [3] Ghasemzadeh, H., & Jafari, R. (2010, March). Body sensor networks for baseball swing training: Coordination analysis of human movements using motion transcripts. In 2010 8th IEEE International Conference on Pervasive Computing and Communications Workshops (PERCOM Workshops) (pp. 792-795). IEEE. 
+* [4] Kim, Y. J., Kim, K. D., Kim, S. H., Lee, S., & Lee, H. S. (2017). Golf swing analysis system with a dual band and motion analysis algorithm. IEEE Transactions on Consumer Electronics, 63(3), 309-317
+* [5] Liu, J. J., Newman, J., & Lee, D. J. (2020, October). Body Motion Analysis for Golf Swing Evaluation. In International Symposium on Visual Computing (pp. 566-577). Springer, Cham.
+* [6] D. Wei, "Prediction of Stock Price Based on LSTM Neural Network," 2019 International Conference on Artificial Intelligence and Advanced Manufacturing (AIAM), 2019, pp. 544-547, doi: 10.1109/AIAM48774.2019.00113.
+* [7] R. R. Mahurkar and N. G. Gadge, "Real-time Covid-19 Face Mask Detection with YOLOv4," 2021 Second International Conference on Electronics and Sustainable Communication Systems (ICESC), 2021, pp. 1250-1255, doi: 10.1109/ICESC51422.2021.9533008.
+* [8] ZiHe Qiu, Ping Shi, Da Pan and DiXiu Zhong, "Coin detection and recognition in the natural scene," 2016 IEEE Advanced Information Management, Communicates, Electronic and Automation Control Conference (IMCEC), 2016, pp. 653-657, doi: 10.1109/IMCEC.2016.7867290.
+
 
 ## 安裝說明
 
