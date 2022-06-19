@@ -345,6 +345,17 @@ darknet
   <br>
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/coinResult.png">
 ### 6. 動作評分_相片-結果
+* 當我們選擇相片模式後，系統會要求上傳範本圖片，之後會要求上傳比對圖片，之後會回傳4個圖片以及評分
+* 回傳範本動作渲染圖
+  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseImageResult1.png">
+* 回傳比對動作渲染圖
+  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseImageResult2.png">
+* 回傳範本動作骨架向量圖
+  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseImageResult3.png">
+* 回傳比對動作骨架向量圖(會標出該注意的部位)
+  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseImageResult4.png">
+* 回傳相似分數
+  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseImageResult5.png">
 ### 7. 動作評分_影片-結果
 
 ## 參考資料
