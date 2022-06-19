@@ -316,6 +316,8 @@ darknet
   - 上傳檔案 : 讓使用者可從媒體庫上傳檔案
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/linePage3.png">
 ### 2. 聊天機器人-結果
+* 我們可以直接在Line上面傳送訊息，我們會將訊息進行計算，並回復使用者
+  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/chatResult.png">
 ### 3. 股票預測-結果
 ### 4. 口罩辨識-結果
 ### 5. 零錢辨識-結果
