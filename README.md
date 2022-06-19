@@ -361,12 +361,12 @@ darknet
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseVideoResult1.png" width="30%">
 * 我們與體育室許家得老師進行合作，以高爾夫球揮桿進行測試，利用課堂中的期中評測，我們請老師針對學生的揮桿動作進行評分，同時也用我們的系統進行評測。
 * 此為我們動作評分的結果， 我們總共測試了13個學生， 每人揮桿10次，共130個動作，藍色的點是老師的評分，橘色的點是系統的評分。
-* 相關係數為0.498745，呈現正相關
+* 相關係數為0.498745，呈現正相關<br>
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseVideoResult2.png">
-* 以下是分數平均後的呈現，平均分數呈現上升趨勢，但系統較難辨識出3~5分之間的差距，估計此地方為學生與老師相似程度的極限。
+* 以下是分數平均後的呈現，平均分數呈現上升趨勢，但系統較難辨識出3~5分之間的差距，估計此地方為學生與老師相似程度的極限。<br>
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseVideoResult3.png">
 * 系統分數與老師評分的差距:
-  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseVideoResult4.png">
+  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseVideoResult4.png" width="50%">
 ## 參考資料
 - [darknet](https://github.com/AlexeyAB/darknet)
 - [openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)
