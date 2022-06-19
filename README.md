@@ -365,8 +365,8 @@ darknet
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseVideoResult2.png">
 * 以下是分數平均後的呈現，平均分數呈現上升趨勢，但系統較難辨識出3~5分之間的差距，估計此地方為學生與老師相似程度的極限。<br>
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseVideoResult3.png">
-* 系統分數與老師評分的差距:
-  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseVideoResult4.png" width="50%">
+* 系統分數與老師評分的差距:<br>
+  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseVideoResult4.png" width="75%">
 ## 參考資料
 - [darknet](https://github.com/AlexeyAB/darknet)
 - [openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)
