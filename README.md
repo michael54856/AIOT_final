@@ -303,7 +303,7 @@ darknet
 * 第一頁有
   - 使用說明 : 按下時會跳出說明文件告知使用者該如何操作
   - 股票預測 : 跳到股票預測功能，會詢問使用者要預測的上市公司，以及要預測的時間長度(短期、中期、長期)
-* <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/linePage1.png">
+  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/linePage1.png">
 * 第二頁有
   - 使用說明 : 按下時會跳出說明文件告知使用者該如何操作
   - 股票預測 : 跳到股票預測功能，會詢問使用者要預測的上市公司，以及要預測的時間長度(短期、中期、長期)
