@@ -29,10 +29,12 @@ Peter是一個非常忙碌的人，我們想利用A.I的能力以及Line這個�
 - 零錢辨識
 - 動作評分(相片)
 - 動作評分(影片)
+<img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/xmind.png">
 
 ## 動機與目的
 
 ### 1. 聊天機器人-動機
+
 ### 2. 股票預測-動機
 ### 3. 口罩辨識-動機
 ### 4. 零錢辨識-動機
