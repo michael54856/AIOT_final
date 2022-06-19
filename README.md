@@ -337,25 +337,25 @@ darknet
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/stockResult5.png">
 ### 4. 口罩辨識-結果
 * 當我們選擇進行口罩辨識之後，系統會要求上傳圖片
-  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/maskResult1.png">
+  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/maskResult1.png" width="30%">
 * 系統框出人臉，並計算出```正確配戴口罩```、```未正確配戴口罩```、```沒有配戴口罩```的人數
-  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/maskResult2.png">
+  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/maskResult2.png" width="30%">
 ### 5. 零錢辨識-結果
 * 當我們選擇進行零錢辨識之後，系統會要求上傳圖片，系統會計算```1元```、```5元```、```10元```、```50元```分別有幾個，並算出總和
   <br>
-  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/coinResult.png">
+  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/coinResult.png" width="30%">
 ### 6. 動作評分_相片-結果
 * 當我們選擇相片模式後，系統會要求上傳範本圖片，之後會要求上傳比對圖片，之後會回傳4個圖片以及評分
 * 回傳範本動作渲染圖
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseImageResult1.png" width="30%">
 * 回傳比對動作渲染圖
-  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseImageResult2.png">
+  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseImageResult2.png" width="30%">
 * 回傳範本動作骨架向量圖
-  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseImageResult3.png">
+  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseImageResult3.png" width="30%">
 * 回傳比對動作骨架向量圖(會標出該注意的部位)
-  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseImageResult4.png">
+  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseImageResult4.png" width="30%">
 * 回傳相似分數
-  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseImageResult5.png">
+  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/poseImageResult5.png" width="30%">
 ### 7. 動作評分_影片-結果
 
 ## 參考資料
