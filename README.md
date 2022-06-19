@@ -12,6 +12,18 @@
   - [提醒](#提醒)
 - [使用說明](#使用說明)
 - [參考資料](#參考資料)
+
+## 簡介
+Peter是一個非常忙碌的人，我們想利用A.I的能力以及Line這個方便的介面，為Peter這樣忙碌的人提供生活中的便利性，建立一個綜合的智慧物聯網系統。
+* 我們的系統包含了以下幾個功能：
+- 聊天機器人
+- 股票預測
+- 口罩辨識
+- 零錢辨識
+- 動作評分(相片)
+- 動作評分(影片)
+
+
 ## 要求
 - [darknet](https://github.com/AlexeyAB/darknet)
 - [openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)
