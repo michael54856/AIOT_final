@@ -321,14 +321,19 @@ darknet
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/chatResult.png">
 ### 3. 股票預測-結果
 * 首先我們要選擇想要預測哪一間公司
+  <br>
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/stockResult1.png">
 * 之後可以選擇短期(7天)、中期(30天)、長期(180天)，會返回預測的圖表以及將來的收盤價格
+  <br>
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/stockResult2.png">
 * 對Intel進行長期預測
+  <br>
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/stockResult3.png">
 * 對Google進行中期預測
+  <br>
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/stockResult4.png">
 * 對Microsoft進行短期預測
+  <br>
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/stockResult5.png">
 ### 4. 口罩辨識-結果
 ### 5. 零錢辨識-結果
