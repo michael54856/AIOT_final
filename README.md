@@ -305,10 +305,16 @@ darknet
   - 股票預測 : 跳到股票預測功能，會詢問使用者要預測的上市公司，以及要預測的時間長度(短期、中期、長期)
   <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/linePage1.png">
 * 第二頁有
-  - 使用說明 : 按下時會跳出說明文件告知使用者該如何操作
-  - 股票預測 : 跳到股票預測功能，會詢問使用者要預測的上市公司，以及要預測的時間長度(短期、中期、長期)
-* <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/linePage1.png">
-* <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/linePage1.png">
+  - 零錢辨識 : 按下時後要求使用者上傳零錢的圖片
+  - 口罩辨識 : 按下時後要求使用者上傳人物的圖片
+  - 動作評分_相片 : 按下時後要求使用者上傳範本動作的相片，再上傳比對動作的相片
+  - 動作評分_影片 : 按下時後要求使用者上傳範本動作的影片，再上傳比對動作的影片
+  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/linePage2.png">
+* 第三頁有
+  - 功能重置 : 按下時可清除執行途中的功能
+  - 打開相機 : 按下時後可以直接打開相機進行拍攝
+  - 上傳檔案 : 讓使用者可從媒體庫上傳檔案
+  <img src="https://raw.githubusercontent.com/michael54856/Images/main/AIOT_final/linePage3.png">
 ### 2. 聊天機器人-結果
 ### 3. 股票預測-結果
 ### 4. 口罩辨識-結果
