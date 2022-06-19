@@ -371,7 +371,8 @@ darknet
 
 
 ## 示範影片
-- 報告與程式碼講解 : 
+- 報告影片 : https://youtu.be/HYyWjrLZFtU
+- 程式碼講解影片 : https://youtu.be/5l2HUjCIzBw
 - 實機DEMO影片 : https://youtu.be/WatGvEkxkbo
 
 ## 參考資料
